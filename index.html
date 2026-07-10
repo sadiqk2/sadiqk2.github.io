@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sadiq Khan — Software Engineer</title>
-  <meta name="description" content="Sadiq Khan — backend software engineer specialising in PHP, Symfony and multi-tenant SaaS platforms." />
-  <meta property="og:title" content="Sadiq Khan — Software Engineer" />
+  <title>Sadiq Khan — Senior Backend Engineer</title>
+  <meta name="description" content="Sadiq Khan — senior backend engineer specialising in PHP, Symfony and multi-tenant SaaS platforms." />
+  <meta property="og:title" content="Sadiq Khan — Senior Backend Engineer" />
   <meta property="og:description" content="Backend engineer building multi-tenant SaaS with PHP, Symfony & Doctrine." />
   <meta property="og:type" content="website" />
   <style>
@@ -96,11 +96,15 @@
     .job li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
 
     .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border: 1px solid var(--line); }
-    .proj-card { padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; background: var(--panel); }
+    .proj-card { padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; background: var(--panel); transition: background .14s ease; }
+    .proj-card:hover { background: color-mix(in srgb, var(--accent-tint) 60%, var(--panel)); }
     .proj-card h3 { font-size: 1.02rem; margin-bottom: 9px; letter-spacing: -.01em; }
     .proj-card h3::before { content: "//"; font-family: var(--mono); color: var(--accent); margin-right: 8px; font-weight: 400; }
     .proj-card p { color: var(--ink-soft); font-size: .92rem; flex: 1; }
     .proj-card .tags { margin-top: 15px; }
+    .proj-card .links { margin-top: 15px; display: flex; gap: 18px; font-family: var(--mono); font-size: .8rem; }
+    .proj-card .links a { color: var(--accent); }
+    .proj-card .links a:hover { text-decoration: underline; }
 
     .contact-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
     footer { border-top: 1px solid var(--line); padding: 34px 0; font-family: var(--mono); font-size: .78rem; color: var(--ink-faint); letter-spacing: .02em; }
@@ -126,7 +130,7 @@
     <div class="wrap">
       <div class="monogram">SK</div>
       <h1>Sadiq Khan</h1>
-      <div class="title">Backend Software Engineer</div>
+      <div class="title">Senior Backend Engineer</div>
       <p class="tagline">
         I build and maintain multi-tenant SaaS platforms with PHP &amp; Symfony — from
         domain-rich data models to the reporting, integrations and AI tooling layered on top.
@@ -134,7 +138,7 @@
       <div class="meta">
         <span><span class="k">loc</span> New Delhi, India</span>
         <span><span class="k">exp</span> 5+ years</span>
-        <span><span class="k">role</span> Software Engineer @ Qbil Software</span>
+        <span><span class="k">role</span> Senior Backend Engineer @ Qbil Software</span>
         <span><span class="k">mail</span> sadiq.khan@qbilsoftware.com</span>
       </div>
       <div class="cta">
@@ -148,8 +152,8 @@
     <div class="wrap">
       <div class="section-head"><span class="eyebrow">01</span><h2>About</h2></div>
       <p class="lead">
-        I'm a backend engineer with 5+ years' experience building reliable, well-modelled systems for
-        complex business domains. My day-to-day is a large multi-tenant commodity-trading platform built on
+        I'm a senior backend engineer with 5+ years' experience building reliable, well-modelled systems
+        for complex business domains. My day-to-day is a large multi-tenant commodity-trading platform built on
         PHP 8.5, Symfony 7 and Doctrine ORM, where I work across domain modelling, reporting,
         database views and integrations.
       </p>
@@ -167,7 +171,8 @@
         <div class="srow">
           <div class="cat">languages</div>
           <div class="tags">
-            <span class="tag">PHP 8.5</span><span class="tag">TypeScript</span><span class="tag">SQL</span>
+            <span class="tag">PHP 8.5</span><span class="tag">TypeScript</span>
+            <span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">Bash</span>
           </div>
         </div>
         <div class="srow">
@@ -189,6 +194,7 @@
           <div class="tags">
             <span class="tag">DDD</span><span class="tag">Vertical Slices</span>
             <span class="tag">PHPUnit</span><span class="tag">Behat</span><span class="tag">CI/CD</span>
+            <span class="tag">REST APIs</span><span class="tag">Git</span>
           </div>
         </div>
       </div>
@@ -199,7 +205,7 @@
     <div class="wrap">
       <div class="section-head"><span class="eyebrow">03</span><h2>Experience</h2></div>
       <div class="job">
-        <div class="role">Software Engineer</div>
+        <div class="role">Senior Backend Engineer</div>
         <div class="company">Qbil Software</div>
         <ul>
           <li>Build and maintain features on a multi-tenant commodity-trading SaaS platform (PHP 8.5, Symfony 7, Doctrine, MySQL 8).</li>
@@ -223,6 +229,18 @@
           <h3>Reporting &amp; Position Views</h3>
           <p>A reporting layer built on encapsulated SQL views — commercial position lists, stock and contract-planning quantities across tenants.</p>
           <div class="tags"><span class="tag">MySQL</span><span class="tag">Doctrine</span><span class="tag">Reporting</span></div>
+        </div>
+        <div class="proj-card">
+          <h3>Qbil API PHP SDK</h3>
+          <p>A PHP client library for the Qbil trading API — typed request/response models and helpers for integrating with the platform.</p>
+          <div class="tags"><span class="tag">PHP</span><span class="tag">REST API</span><span class="tag">SDK</span></div>
+          <div class="links"><a href="https://github.com/sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener">code ↗</a></div>
+        </div>
+        <div class="proj-card">
+          <h3>API Examples</h3>
+          <p>Sample applications demonstrating how to consume the API — practical, copy-ready integration examples.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">REST API</span></div>
+          <div class="links"><a href="https://github.com/sadiqk2/API-Examples" target="_blank" rel="noopener">code ↗</a></div>
         </div>
       </div>
     </div>
