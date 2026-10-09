@@ -17,6 +17,6 @@ Push to `main` and GitHub Pages redeploys automatically within a minute or two.
 
 ## Things to add later
 
-- LinkedIn / résumé-PDF links (add buttons back to the `.cta` and contact rows)
-- Location, employment dates, and earlier roles in the Experience section
-- More projects, and photo instead of the `SK` monogram
+- Photo instead of the `SK` monogram
+- A downloadable résumé PDF (host it here and link it from the CTA / contact rows)
+- More projects (e.g. the Leaked Password Checker repo, once public)
