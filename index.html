@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sadiq Khan — Senior Backend Engineer</title>
-  <meta name="description" content="Sadiq Khan — senior backend engineer specialising in PHP, Symfony and multi-tenant SaaS platforms." />
-  <meta property="og:title" content="Sadiq Khan — Senior Backend Engineer" />
-  <meta property="og:description" content="Backend engineer building multi-tenant SaaS with PHP, Symfony & Doctrine." />
+  <title>Sadiq Ali Khan — Senior Full-Stack Software Engineer</title>
+  <meta name="description" content="Sadiq Ali Khan — senior full-stack engineer. PHP 8 / Symfony multi-tenant ERP for 40 tenants, ~10M API requests/month, GraphQL & REST, React, AWS. Symfony core contributor." />
+  <meta property="og:title" content="Sadiq Ali Khan — Senior Full-Stack Software Engineer" />
+  <meta property="og:description" content="Full-stack engineer building a production multi-tenant ERP with PHP/Symfony, GraphQL, React and AWS — from React UIs to the public SDK." />
   <meta property="og:type" content="website" />
   <style>
     :root {
@@ -52,7 +52,7 @@
     nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; }
     nav .brand { font-family: var(--mono); font-weight: 600; font-size: .95rem; letter-spacing: -.01em; }
     nav .brand::before { content: "› "; color: var(--accent); }
-    nav .links { display: flex; gap: 26px; }
+    nav .links { display: flex; gap: 22px; }
     nav .links a { font-family: var(--mono); font-size: .8rem; color: var(--ink-soft); letter-spacing: .02em; }
     nav .links a:hover { color: var(--accent); }
     @media (max-width: 640px) { nav .links { display: none; } }
@@ -90,10 +90,14 @@
     .job::before { content: ""; position: absolute; left: -4.5px; top: 7px; width: 8px; height: 8px; background: var(--accent); border: 1px solid var(--paper); }
     .job .role { font-weight: 700; font-size: 1.12rem; letter-spacing: -.01em; }
     .job .company { color: var(--accent); font-weight: 600; }
-    .job .period { font-family: var(--mono); color: var(--ink-faint); font-size: .8rem; margin: 5px 0 14px; letter-spacing: .02em; }
-    .job ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .job .period { font-family: var(--mono); color: var(--ink-faint); font-size: .8rem; margin: 5px 0 4px; letter-spacing: .02em; }
+    .job .desc { color: var(--ink-soft); font-size: .94rem; margin-bottom: 12px; max-width: 64ch; }
+    .job ul { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 8px; }
     .job li { color: var(--ink-soft); padding-left: 20px; position: relative; }
     .job li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+    .job .links { margin-top: 12px; display: flex; gap: 18px; font-family: var(--mono); font-size: .8rem; }
+    .job .links a { color: var(--accent); }
+    .job .links a:hover { text-decoration: underline; }
 
     .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border: 1px solid var(--line); }
     .proj-card { padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; background: var(--panel); transition: background .14s ease; }
@@ -121,6 +125,7 @@
         <a href="#skills">skills</a>
         <a href="#experience">experience</a>
         <a href="#projects">projects</a>
+        <a href="#open-source">open source</a>
         <a href="#contact">contact</a>
       </div>
     </div>
@@ -129,21 +134,25 @@
   <header class="hero">
     <div class="wrap">
       <div class="monogram">SK</div>
-      <h1>Sadiq Khan</h1>
-      <div class="title">Senior Backend Engineer</div>
+      <h1>Sadiq Ali Khan</h1>
+      <div class="title">Senior Full-Stack Software Engineer — PHP / Symfony · REST &amp; GraphQL · AWS &amp; Docker</div>
       <p class="tagline">
-        I build and maintain multi-tenant SaaS platforms with PHP &amp; Symfony — from
-        domain-rich data models to the reporting, integrations and AI tooling layered on top.
+        I build and run a production multi-tenant ERP from React UIs to the GraphQL/REST
+        API layer — 40 tenants on one codebase, the public SDK and docs on top, AWS below it.
       </p>
       <div class="meta">
-        <span><span class="k">loc</span> New Delhi, India</span>
+        <span><span class="k">loc</span> Jammu &amp; Kashmir, India</span>
+        <span><span class="k">open</span> Remote (EU overlap)</span>
         <span><span class="k">exp</span> 5+ years</span>
-        <span><span class="k">role</span> Senior Backend Engineer @ Qbil Software</span>
-        <span><span class="k">mail</span> sadiqali94@gmail.com</span>
+        <span><span class="k">role</span> Senior Software Engineer @ Qbil Software</span>
+        <span><span class="k">mail</span> <a href="mailto:sadiqali94@gmail.com">sadiqali94@gmail.com</a></span>
+        <span><span class="k">tel</span> <a href="tel:+919596484052">+91 95964 84052</a></span>
       </div>
       <div class="cta">
         <a class="btn primary" href="#contact">Get in touch</a>
         <a class="btn" href="https://github.com/sadiqk2" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/sadiq-ali-khan-39a2821b5" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://developers.qbiltrade.com" target="_blank" rel="noopener">API docs ↗</a>
       </div>
     </div>
   </header>
@@ -152,14 +161,19 @@
     <div class="wrap">
       <div class="section-head"><span class="eyebrow">01</span><h2>About</h2></div>
       <p class="lead">
-        I'm a senior backend engineer with 5+ years' experience building reliable, well-modelled systems
-        for complex business domains. My day-to-day is a large multi-tenant commodity-trading platform built on
-        PHP 8.5, Symfony 7 and Doctrine ORM, where I work across domain modelling, reporting,
-        database views and integrations.
+        I'm a senior full-stack engineer with 5+ years building and supporting a production
+        multi-tenant ERP — PHP 8 / Symfony, GraphQL and REST APIs, React, MySQL and Redis —
+        serving 40 tenants from a single codebase on a 2-week release cadence.
       </p>
       <p class="lead">
-        I care about domain-driven design, clean vertical-slice architecture, and code that's boring
-        in the best way — simple, testable and self-documenting.
+        I own the API layer (~10M requests/month), ship the public SDKs and documentation
+        customers build on, lead production incident investigation, and mentor engineers
+        through code review. Along the way: 25+ merged PRs to Symfony core and a fix in
+        Google's official PHP API client.
+      </p>
+      <p class="lead">
+        I care about domain-driven design, boring-in-the-best-way code, and working with
+        observability you can actually trust — simple, testable and self-documenting.
       </p>
     </div>
   </section>
@@ -169,32 +183,46 @@
       <div class="section-head"><span class="eyebrow">02</span><h2>Skills &amp; Tooling</h2></div>
       <div class="skills">
         <div class="srow">
-          <div class="cat">languages</div>
+          <div class="cat">backend &amp; APIs</div>
           <div class="tags">
-            <span class="tag">PHP 8.5</span><span class="tag">TypeScript</span>
-            <span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">Bash</span>
+            <span class="tag">PHP 7/8</span><span class="tag">Symfony</span>
+            <span class="tag">REST API design</span><span class="tag">GraphQL</span>
+            <span class="tag">OpenAPI</span><span class="tag">MySQL</span>
+            <span class="tag">Redis</span><span class="tag">Python</span><span class="tag">FastAPI</span>
           </div>
         </div>
         <div class="srow">
-          <div class="cat">frameworks</div>
+          <div class="cat">frontend</div>
           <div class="tags">
-            <span class="tag">Symfony 7</span><span class="tag">Doctrine ORM</span>
-            <span class="tag">Twig</span><span class="tag">Vite</span>
+            <span class="tag">TypeScript</span><span class="tag">JavaScript</span>
+            <span class="tag">React</span><span class="tag">Tailwind CSS</span>
+            <span class="tag">SVG</span><span class="tag">Data visualisation</span>
           </div>
         </div>
         <div class="srow">
-          <div class="cat">data &amp; infra</div>
+          <div class="cat">cloud &amp; devops</div>
           <div class="tags">
-            <span class="tag">MySQL 8</span><span class="tag">ClickHouse</span>
-            <span class="tag">Redis</span><span class="tag">Docker</span>
+            <span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">CI/CD</span>
+            <span class="tag">WAF</span><span class="tag">Ansible</span><span class="tag">Sentry</span>
+            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Jira</span>
+            <span class="tag">Zendesk</span>
           </div>
         </div>
         <div class="srow">
           <div class="cat">practices</div>
           <div class="tags">
-            <span class="tag">DDD</span><span class="tag">Vertical Slices</span>
-            <span class="tag">PHPUnit</span><span class="tag">Behat</span><span class="tag">CI/CD</span>
-            <span class="tag">REST APIs</span><span class="tag">Git</span>
+            <span class="tag">DDD</span><span class="tag">TDD</span><span class="tag">SOLID</span>
+            <span class="tag">Multi-tenant architecture</span><span class="tag">SDK design</span>
+            <span class="tag">Root-cause analysis</span><span class="tag">Code review</span>
+            <span class="tag">Technical documentation</span><span class="tag">Mentoring</span>
+          </div>
+        </div>
+        <div class="srow">
+          <div class="cat">AI tooling</div>
+          <div class="tags">
+            <span class="tag">Claude</span><span class="tag">GitHub Copilot</span>
+            <span class="tag">LLM API integration</span><span class="tag">AI-assisted testing</span>
+            <span class="tag">AI PR review</span>
           </div>
         </div>
       </div>
@@ -205,12 +233,28 @@
     <div class="wrap">
       <div class="section-head"><span class="eyebrow">03</span><h2>Experience</h2></div>
       <div class="job">
-        <div class="role">Senior Backend Engineer</div>
+        <div class="role">Senior Software Engineer</div>
         <div class="company">Qbil Software</div>
+        <div class="period">Jul 2021 – Present · Remote (Netherlands)</div>
+        <div class="desc">Qbil-Trade — multi-tenant ERP for physical commodity trading and logistics (PHP/Symfony, GraphQL, React).</div>
         <ul>
-          <li>Build and maintain features on a multi-tenant commodity-trading SaaS platform (PHP 8.5, Symfony 7, Doctrine, MySQL 8).</li>
-          <li>Design domain-rich entities and reporting database views for position lists, stock and contract planning.</li>
-          <li>Work on integrations and in-app AI tooling that surface business data to users.</li>
+          <li>Own the GraphQL + REST API layer (~10M requests/month) used by the React front end and external integrators — integration, authentication, error handling and API-led delivery.</li>
+          <li>Shipped the public Qbil PHP SDK (PHP 8.1+, Stainless-generated) with reference documentation at developers.qbiltrade.com — typed, named-parameter access to the full REST API with structured error handling.</li>
+          <li>Design and build features across the stack (React UI, Symfony services, GraphQL/REST APIs, MySQL, Redis), translating business requirements from 40 customer tenants into maintainable code on a 2-week release cadence.</li>
+          <li>Model contracts, orders, transport, production and invoicing with DDD and SOLID — 40 tenants from one codebase with zero forks, making delivery-versus-design trade-offs with product and customer stakeholders.</li>
+          <li>Lead production issue investigation across Sentry, Zendesk and Jira: correlate recurring incidents to releases, write root-cause analyses, and publish customer-facing release notes for every release.</li>
+          <li>Raised regression test coverage to ~70% using TDD and AI-assisted test generation, and mentor engineers through guideline-based code review with feature branches, atomic commits and Jira-linked PRs.</li>
+          <li>Support deployments of the containerised application stack on AWS; built 4 customer-facing document templates (contracts, orders, transport orders, invoices) in ReportBro with per-tenant layouts.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="role">Full Stack Developer</div>
+        <div class="company">ICloudEMS</div>
+        <div class="period">Apr 2021 – Jul 2021 · India</div>
+        <div class="desc">Student-centric ERP for universities and colleges.</div>
+        <ul>
+          <li>Built and shipped backend and UI modules for multiple university customers.</li>
+          <li>Managed the cloud servers used for deployment.</li>
         </ul>
       </div>
     </div>
@@ -222,25 +266,30 @@
       <div class="proj-grid">
         <div class="proj-card">
           <h3>Live Markets Dashboard</h3>
-          <p>A real-time multi-asset dashboard from public keyless APIs — a crypto portfolio (CoinGecko), live FX rates with a 30-day trend (ECB/Frankfurter), and gold/silver spot. Hand-drawn SVG charts, CVD-safe palette, editable holdings; fully client-side.</p>
+          <p>A real-time multi-asset dashboard from public keyless APIs — a crypto portfolio (CoinGecko), live FX rates with a 30-day trend (ECB/Frankfurter), and gold/silver spot. Hand-drawn SVG charts, editable holdings; fully client-side.</p>
           <div class="tags"><span class="tag">JavaScript</span><span class="tag">REST APIs</span><span class="tag">SVG</span><span class="tag">Data Viz</span></div>
           <div class="links"><a href="https://sadiqk2.github.io/portfolio-dashboard" target="_blank" rel="noopener">live ↗</a><a href="https://github.com/sadiqk2/portfolio-dashboard" target="_blank" rel="noopener">code ↗</a></div>
+        </div>
+        <div class="proj-card">
+          <h3>Qbil API PHP SDK</h3>
+          <p>The public PHP client for the Qbil trading API — PHP 8.1+, Stainless-generated, typed request/response models and structured error handling, documented at developers.qbiltrade.com.</p>
+          <div class="tags"><span class="tag">PHP</span><span class="tag">REST API</span><span class="tag">SDK</span><span class="tag">OpenAPI</span></div>
+          <div class="links"><a href="https://github.com/sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener">code ↗</a><a href="https://developers.qbiltrade.com" target="_blank" rel="noopener">docs ↗</a></div>
+        </div>
+        <div class="proj-card">
+          <h3>Leaked Password Checker</h3>
+          <p>A static web app plus FastAPI service that checks a password against breach data using k-anonymity range lookups — no raw hashes ever leave the client, documented with OpenAPI.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">OpenAPI</span><span class="tag">Security</span></div>
+        </div>
+        <div class="proj-card">
+          <h3>Reporting &amp; Position Views</h3>
+          <p>A reporting layer built on encapsulated SQL views — commercial position lists, stock and contract-planning quantities across tenants.</p>
+          <div class="tags"><span class="tag">MySQL</span><span class="tag">Symfony</span><span class="tag">Reporting</span></div>
         </div>
         <div class="proj-card">
           <h3>AI Assistant Hub</h3>
           <p>An in-app AI agent that answers business questions over live tenant data using queryable database views and a curated tool set.</p>
           <div class="tags"><span class="tag">PHP</span><span class="tag">LLM Agents</span><span class="tag">Symfony</span></div>
-        </div>
-        <div class="proj-card">
-          <h3>Reporting &amp; Position Views</h3>
-          <p>A reporting layer built on encapsulated SQL views — commercial position lists, stock and contract-planning quantities across tenants.</p>
-          <div class="tags"><span class="tag">MySQL</span><span class="tag">Doctrine</span><span class="tag">Reporting</span></div>
-        </div>
-        <div class="proj-card">
-          <h3>Qbil API PHP SDK</h3>
-          <p>A PHP client library for the Qbil trading API — typed request/response models and helpers for integrating with the platform.</p>
-          <div class="tags"><span class="tag">PHP</span><span class="tag">REST API</span><span class="tag">SDK</span></div>
-          <div class="links"><a href="https://github.com/sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener">code ↗</a></div>
         </div>
         <div class="proj-card">
           <h3>API Examples</h3>
@@ -258,20 +307,72 @@
     </div>
   </section>
 
+  <section id="open-source">
+    <div class="wrap">
+      <div class="section-head"><span class="eyebrow">05</span><h2>Open Source</h2></div>
+      <div class="job">
+        <div class="role">Symfony — core contributor</div>
+        <div class="company">Tui component</div>
+        <div class="period">25+ merged PRs</div>
+        <ul>
+          <li>Fixes for rendering, layout, input-sanitising, timer-drift and Unicode/emoji-width bugs — each shipped with regression tests.</li>
+        </ul>
+        <div class="links"><a href="https://github.com/symfony/symfony" target="_blank" rel="noopener">repo ↗</a></div>
+      </div>
+      <div class="job">
+        <div class="role">Google API PHP Client</div>
+        <div class="company">googleapis · 9.8k ★</div>
+        <div class="period">merged · shipped in v2.20.1</div>
+        <ul>
+          <li>Matched batch response parts to requests by Content-ID instead of position, so reordered responses no longer decode into the wrong model class.</li>
+        </ul>
+        <div class="links"><a href="https://github.com/googleapis/google-api-php-client/pull/2726" target="_blank" rel="noopener">PR ↗</a></div>
+      </div>
+      <div class="job">
+        <div class="role">NativePHP for Symfony</div>
+        <div class="company">author &amp; maintainer</div>
+        <div class="period">~1,170 tests · Packagist</div>
+        <ul>
+          <li>Ported the Electron desktop and iOS/Android mobile runtimes to Symfony, published on Packagist, with 11 upstream patches (4 merged).</li>
+        </ul>
+        <div class="links"><a href="https://github.com/Sadiqk2/nativephp-symfony" target="_blank" rel="noopener">repo ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head"><span class="eyebrow">06</span><h2>Education</h2></div>
+      <div class="job">
+        <div class="role">B.Tech, Computer Science &amp; Engineering</div>
+        <div class="company">Sharda University</div>
+        <div class="period">2017 – 2021</div>
+      </div>
+      <div class="job">
+        <div class="role">DevOps Engineer certification</div>
+        <div class="company">IIT Roorkee (Intellipaat)</div>
+        <div class="period">Jan – Mar 2021</div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="wrap">
-      <div class="section-head"><span class="eyebrow">05</span><h2>Contact</h2></div>
-      <p class="lead">Open to interesting backend and platform work. The fastest way to reach me is email.</p>
+      <div class="section-head"><span class="eyebrow">07</span><h2>Contact</h2></div>
+      <p class="lead">Open to interesting full-stack and platform work, remote with EU overlap. The fastest way to reach me is email or phone.</p>
       <div class="contact-row">
         <a class="btn primary" href="mailto:sadiqali94@gmail.com">Email me</a>
+        <a class="btn" href="tel:+919596484052">+91 95964 84052</a>
         <a class="btn" href="https://github.com/sadiqk2" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/sadiq-ali-khan-39a2821b5" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://developers.qbiltrade.com" target="_blank" rel="noopener">API docs ↗</a>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
-      © <span id="year">2026</span> Sadiq Khan · built with plain HTML &amp; CSS · hosted on GitHub Pages
+      © <span id="year">2026</span> Sadiq Ali Khan · built with plain HTML &amp; CSS · hosted on GitHub Pages
     </div>
   </footer>
 
