@@ -134,6 +134,21 @@
       background-size: 100% 100%, 48px 48px, 48px 48px;
     }
 
+    .webgl-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.65;
+      transition: opacity 0.5s ease;
+    }
+
+    [data-theme="light"] .webgl-canvas {
+      opacity: 0.45;
+    }
+
     .container {
       width: 100%;
       max-width: var(--container-w);
@@ -1422,6 +1437,7 @@
 
   <!-- Ambient Light/Glow and Grid Background -->
   <div class="ambient-bg" aria-hidden="true"></div>
+  <canvas id="bg-canvas" class="webgl-canvas" aria-hidden="true"></canvas>
 
   <!-- Main Navigation Bar -->
   <header class="navbar">
@@ -2407,6 +2423,264 @@
       <path d="m18 15-6-6-6 6"/>
     </svg>
   </button>
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Three.js Interactive Hero Constellation / Neural Network Animation -->
+  <script>
+    (function initHeroConstellation() {
+      if (typeof THREE === 'undefined') return;
+
+      const canvas = document.getElementById('bg-canvas');
+      if (!canvas) return;
+
+      // Check for user preference for reduced motion
+      const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Renderer setup
+      const renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        alpha: true,
+        antialias: window.devicePixelRatio <= 1,
+        powerPreference: 'high-performance'
+      });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      // Scene & Camera setup
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 2000);
+      camera.position.z = 750;
+
+      // Responsive particle count based on screen size
+      const isMobile = window.innerWidth < 768;
+      const particleCount = prefersReducedMotion ? 25 : (isMobile ? 45 : 85);
+      const maxDistance = isMobile ? 110 : 140;
+
+      // Theme Colors definition
+      const darkColorParticle = new THREE.Color(0x38bdf8); // Sky blue
+      const darkColorLine = new THREE.Color(0x0284c7);     // Deep sky
+      const lightColorParticle = new THREE.Color(0x0284c7);
+      const lightColorLine = new THREE.Color(0x94a3b8);    // Subtle slate
+
+      function getIsLight() {
+        return document.documentElement.getAttribute('data-theme') === 'light';
+      }
+
+      // Geometries & Materials
+      const particlesData = [];
+      const particlePositions = new Float32Array(particleCount * 3);
+      const bounds = { x: 900, y: 650, z: 500 };
+
+      for (let i = 0; i < particleCount; i++) {
+        const x = (Math.random() - 0.5) * bounds.x;
+        const y = (Math.random() - 0.5) * bounds.y;
+        const z = (Math.random() - 0.5) * bounds.z;
+
+        particlePositions[i * 3] = x;
+        particlePositions[i * 3 + 1] = y;
+        particlePositions[i * 3 + 2] = z;
+
+        particlesData.push({
+          velocity: new THREE.Vector3(
+            (Math.random() - 0.5) * (prefersReducedMotion ? 0.05 : 0.4),
+            (Math.random() - 0.5) * (prefersReducedMotion ? 0.05 : 0.4),
+            (Math.random() - 0.5) * (prefersReducedMotion ? 0.05 : 0.3)
+          ),
+          numConnections: 0
+        });
+      }
+
+      // Point Cloud Geometry
+      const pointGeometry = new THREE.BufferGeometry();
+      pointGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3).setUsage(THREE.DynamicDrawUsage));
+
+      // Circular sprite texture for particles
+      const canvasSprite = document.createElement('canvas');
+      canvasSprite.width = 32;
+      canvasSprite.height = 32;
+      const ctx = canvasSprite.getContext('2d');
+      const grad = ctx.createRadialGradient(16, 16, 0, 16, 16, 16);
+      grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+      grad.addColorStop(0.3, 'rgba(56, 189, 248, 0.9)');
+      grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 32, 32);
+      const spriteTexture = new THREE.CanvasTexture(canvasSprite);
+
+      const pointMaterial = new THREE.PointsMaterial({
+        color: getIsLight() ? lightColorParticle : darkColorParticle,
+        size: isMobile ? 5 : 6.5,
+        map: spriteTexture,
+        transparent: true,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false
+      });
+
+      const pointCloud = new THREE.Points(pointGeometry, pointMaterial);
+      scene.add(pointCloud);
+
+      // Line Segments Geometry
+      const maxLines = (particleCount * (particleCount - 1)) / 2;
+      const linePositions = new Float32Array(maxLines * 6);
+      const lineColors = new Float32Array(maxLines * 6);
+
+      const lineGeometry = new THREE.BufferGeometry();
+      lineGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3).setUsage(THREE.DynamicDrawUsage));
+      lineGeometry.setAttribute('color', new THREE.BufferAttribute(lineColors, 3).setUsage(THREE.DynamicDrawUsage));
+
+      const lineMaterial = new THREE.LineBasicMaterial({
+        vertexColors: true,
+        transparent: true,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false
+      });
+
+      const linesMesh = new THREE.LineSegments(lineGeometry, lineMaterial);
+      scene.add(linesMesh);
+
+      // Mouse Parallax
+      let mouseX = 0;
+      let mouseY = 0;
+      let targetX = 0;
+      let targetY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        targetX = (e.clientX - window.innerWidth / 2) * 0.18;
+        targetY = (e.clientY - window.innerHeight / 2) * 0.18;
+      }, { passive: true });
+
+      // Theme Change Observer
+      function syncThemeColors() {
+        const isLight = getIsLight();
+        pointMaterial.color.copy(isLight ? lightColorParticle : darkColorParticle);
+        lineMaterial.blending = isLight ? THREE.NormalBlending : THREE.AdditiveBlending;
+        lineMaterial.needsUpdate = true;
+      }
+
+      const themeObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.attributeName === 'data-theme') {
+            syncThemeColors();
+          }
+        });
+      });
+      themeObserver.observe(document.documentElement, { attributes: true });
+
+      // Visibility & Performance management: pause when hero is scrolled off screen
+      let isVisible = true;
+      const heroSection = document.getElementById('hero');
+      if ('IntersectionObserver' in window && heroSection) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            isVisible = entry.isIntersecting || window.scrollY < 600;
+          });
+        }, { threshold: 0 });
+        observer.observe(heroSection);
+      }
+
+      // Responsive Resize Handling
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+        }, 150);
+      });
+
+      // Animation Loop
+      let animationFrameId;
+      function animate() {
+        animationFrameId = requestAnimationFrame(animate);
+
+        if (!isVisible && window.scrollY > 800) return;
+
+        // Smooth camera lerp with mouse
+        mouseX += (targetX - mouseX) * 0.05;
+        mouseY += (targetY - mouseY) * 0.05;
+        camera.position.x = mouseX;
+        camera.position.y = -mouseY;
+        camera.lookAt(scene.position);
+
+        // Slow rotation of entire constellation
+        scene.rotation.y += 0.0006;
+        scene.rotation.x += 0.0003;
+
+        let vertexPos = 0;
+        let colorPos = 0;
+        let numConnected = 0;
+
+        for (let i = 0; i < particleCount; i++) {
+          particlesData[i].numConnections = 0;
+        }
+
+        const isLight = getIsLight();
+        const baseLineColor = isLight ? lightColorLine : darkColorLine;
+
+        // Update particle positions & connections
+        for (let i = 0; i < particleCount; i++) {
+          const data = particlesData[i];
+
+          particlePositions[i * 3] += data.velocity.x;
+          particlePositions[i * 3 + 1] += data.velocity.y;
+          particlePositions[i * 3 + 2] += data.velocity.z;
+
+          // Bounce off bounds
+          if (particlePositions[i * 3] < -bounds.x / 2 || particlePositions[i * 3] > bounds.x / 2) {
+            data.velocity.x = -data.velocity.x;
+          }
+          if (particlePositions[i * 3 + 1] < -bounds.y / 2 || particlePositions[i * 3 + 1] > bounds.y / 2) {
+            data.velocity.y = -data.velocity.y;
+          }
+          if (particlePositions[i * 3 + 2] < -bounds.z / 2 || particlePositions[i * 3 + 2] > bounds.z / 2) {
+            data.velocity.z = -data.velocity.z;
+          }
+
+          // Connect nearby particles
+          for (let j = i + 1; j < particleCount; j++) {
+            const dx = particlePositions[i * 3] - particlePositions[j * 3];
+            const dy = particlePositions[i * 3 + 1] - particlePositions[j * 3 + 1];
+            const dz = particlePositions[i * 3 + 2] - particlePositions[j * 3 + 2];
+            const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+            if (dist < maxDistance) {
+              const alpha = (1.0 - dist / maxDistance) * (isLight ? 0.35 : 0.55);
+
+              linePositions[vertexPos++] = particlePositions[i * 3];
+              linePositions[vertexPos++] = particlePositions[i * 3 + 1];
+              linePositions[vertexPos++] = particlePositions[i * 3 + 2];
+
+              linePositions[vertexPos++] = particlePositions[j * 3];
+              linePositions[vertexPos++] = particlePositions[j * 3 + 1];
+              linePositions[vertexPos++] = particlePositions[j * 3 + 2];
+
+              lineColors[colorPos++] = baseLineColor.r * alpha;
+              lineColors[colorPos++] = baseLineColor.g * alpha;
+              lineColors[colorPos++] = baseLineColor.b * alpha;
+
+              lineColors[colorPos++] = baseLineColor.r * alpha;
+              lineColors[colorPos++] = baseLineColor.g * alpha;
+              lineColors[colorPos++] = baseLineColor.b * alpha;
+
+              numConnected++;
+            }
+          }
+        }
+
+        lineGeometry.setDrawRange(0, numConnected * 2);
+        lineGeometry.attributes.position.needsUpdate = true;
+        lineGeometry.attributes.color.needsUpdate = true;
+        pointGeometry.attributes.position.needsUpdate = true;
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+    })();
+  </script>
 
 </body>
 </html>
