@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sadiq Ali Khan &mdash; Senior Full-Stack Software Engineer</title>
   
-  <meta name="description" content="Sadiq Ali Khan &mdash; Senior Full-Stack Software Engineer. Multi-tenant ERP architecture (PHP 8 / Symfony, React, AWS), ~10M API req/mo, Root Cause Analysis (RCA), WordPress, 25+ Symfony core PRs.">
+  <meta name="description" content="Senior Full-Stack Software Engineer with 5+ years of experience engineering high-scale, multi-tenant ERP and SaaS platforms. PHP 8, Symfony, React, TypeScript, AWS, Docker. Core contributor to Symfony and Google API client.">
   <meta name="author" content="Sadiq Ali Khan">
-  <meta name="keywords" content="Sadiq Ali Khan, Full-Stack Engineer, Senior Software Engineer, Symfony, PHP 8, GraphQL, REST API, React, AWS, Multi-tenant ERP, WordPress, Root Cause Analysis, RCA, Open Source">
+  <meta name="keywords" content="Sadiq Ali Khan, Senior Full-Stack Software Engineer, PHP, Symfony, REST APIs, GraphQL, AWS, Docker, React, TypeScript, Multi-Tenant ERP, Root-Cause Analysis, RCA, Open Source">
   
   <!-- Open Graph / Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sadiqk2.github.io/">
   <meta property="og:title" content="Sadiq Ali Khan &mdash; Senior Full-Stack Software Engineer">
-  <meta property="og:description" content="Senior Full-Stack Engineer building a production multi-tenant ERP (40 tenants, ~10M API req/mo, PHP 8 / Symfony, React, AWS). Expert in Root Cause Analysis (RCA) and Symfony core contributor.">
+  <meta property="og:description" content="Senior Full-Stack Software Engineer. 40 enterprise tenants (~10M req/mo), Symfony core contributor (25+ merged PRs), Google API client contributor.">
   <meta property="og:site_name" content="Sadiq Ali Khan Portfolio">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sadiq Ali Khan &mdash; Senior Full-Stack Software Engineer">
-  <meta name="twitter:description" content="Senior Full-Stack Engineer building high-scale multi-tenant ERP systems, APIs, developer tooling, and RCA post-mortems.">
+  <meta name="twitter:description" content="Senior Full-Stack Software Engineer | PHP / Symfony | REST APIs & GraphQL | AWS & Docker">
   
   <!-- Favicon (Inlined SVG) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230b1120'/><text x='50' y='64' font-family='system-ui,sans-serif' font-size='44' font-weight='800' fill='%2338bdf8' text-anchor='middle'>SK</text></svg>">
@@ -57,7 +57,6 @@
       --brand-amber: #fbbf24;
       --brand-emerald: #10b981;
       --brand-purple: #a855f7;
-      --brand-rose: #f43f5e;
       
       --nav-bg: rgba(9, 13, 22, 0.85);
       --badge-bg: rgba(255, 255, 255, 0.04);
@@ -123,7 +122,6 @@
       transition: background-color 0.25s ease, color 0.25s ease;
     }
 
-    /* Ambient Background Effect */
     .ambient-bg {
       position: fixed;
       inset: 0;
@@ -328,7 +326,7 @@
 
     .hero-role {
       font-family: var(--font-mono);
-      font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+      font-size: clamp(0.92rem, 1.7vw, 1.15rem);
       font-weight: 600;
       color: var(--accent);
       margin-bottom: 20px;
@@ -343,10 +341,10 @@
     }
 
     .hero-desc {
-      font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+      font-size: clamp(1.02rem, 1.45vw, 1.18rem);
       color: var(--text-muted);
       max-width: 820px;
-      line-height: 1.65;
+      line-height: 1.68;
       margin-bottom: 32px;
     }
 
@@ -566,11 +564,11 @@
       color: var(--text-muted);
       font-size: 1.02rem;
       margin-top: 6px;
-      max-width: 650px;
+      max-width: 700px;
     }
 
     /* ==========================================================================
-       ABOUT & ARCHITECTURE SUMMARY
+       PROFESSIONAL SUMMARY & PILLARS
        ========================================================================== */
     .about-layout {
       display: grid;
@@ -673,9 +671,9 @@
     }
 
     /* ==========================================================================
-       SKILLS MATRIX
+       TECHNICAL SKILLS (5 RESUME CATEGORIES)
        ========================================================================== */
-    .skills-grid {
+    .skills-grid-5 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
@@ -693,6 +691,10 @@
     .skill-category-card:hover {
       border-color: var(--card-border-hover);
       transform: translateY(-2px);
+    }
+
+    .skill-category-card.full-width {
+      grid-column: 1 / -1;
     }
 
     .cat-head {
@@ -809,7 +811,7 @@
       align-items: flex-start;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 12px;
+      margin-bottom: 6px;
     }
 
     .exp-role {
@@ -837,11 +839,11 @@
       border: 1px solid var(--badge-border);
     }
 
-    .exp-summary {
-      color: var(--text-muted);
-      font-size: 0.96rem;
+    .exp-subtitle {
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
       margin-bottom: 16px;
-      font-style: italic;
     }
 
     .exp-bullets {
@@ -855,7 +857,7 @@
     .exp-bullets li {
       color: var(--text-muted);
       font-size: 0.94rem;
-      line-height: 1.6;
+      line-height: 1.62;
       position: relative;
       padding-left: 22px;
     }
@@ -866,8 +868,7 @@
       left: 0;
       top: 0;
       color: var(--accent);
-      font-size: 1.1rem;
-      line-height: 1.4;
+      font-weight: 600;
     }
 
     .exp-bullets li strong {
@@ -883,7 +884,7 @@
     }
 
     /* ==========================================================================
-       PROJECTS / SELECTED WORK (WITH FILTER TABS)
+       SELECTED WORK & PROJECTS (WITH FILTER TABS)
        ========================================================================== */
     .filter-tabs {
       display: flex;
@@ -1044,7 +1045,7 @@
     }
 
     /* ==========================================================================
-       OPEN SOURCE SPOTLIGHT
+       OPEN SOURCE SPOTLIGHT (MATCHING RESUME)
        ========================================================================== */
     .oss-grid {
       display: grid;
@@ -1112,7 +1113,7 @@
     }
 
     /* ==========================================================================
-       EDUCATION & CERTIFICATIONS
+       EDUCATION & CERTIFICATIONS (EXACT RESUME MATCH)
        ========================================================================== */
     .edu-grid {
       display: grid;
@@ -1205,7 +1206,7 @@
     .contact-lead {
       color: var(--text-muted);
       font-size: 1.1rem;
-      max-width: 620px;
+      max-width: 650px;
       margin: 0 auto 32px;
     }
 
@@ -1255,7 +1256,7 @@
       .about-layout {
         grid-template-columns: 1fr;
       }
-      .skills-grid {
+      .skills-grid-5 {
         grid-template-columns: 1fr;
       }
       .oss-grid {
@@ -1342,7 +1343,7 @@
 
         <nav>
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">Summary</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#work">Work</a></li>
@@ -1388,71 +1389,66 @@
 
   <!-- Mobile Drawer Menu -->
   <div class="mobile-nav-drawer" id="mobileDrawer">
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#skills" class="mobile-link">Skills &amp; Tooling</a>
-    <a href="#experience" class="mobile-link">Experience</a>
-    <a href="#work" class="mobile-link">Work</a>
+    <a href="#about" class="mobile-link">Professional Summary</a>
+    <a href="#skills" class="mobile-link">Technical Skills</a>
+    <a href="#experience" class="mobile-link">Professional Experience</a>
+    <a href="#work" class="mobile-link">Selected Work</a>
     <a href="#opensource" class="mobile-link">Open Source</a>
-    <a href="#education" class="mobile-link">Education</a>
+    <a href="#education" class="mobile-link">Education &amp; Certifications</a>
     <a href="#contact" class="mobile-link">Contact</a>
   </div>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (MATCHING RESUME HEADER) -->
     <section class="hero" id="hero">
       <div class="container">
-        <!-- Availability Radar Badge -->
+        <!-- Availability Radar Badge matching Resume: Open to Remote (EU/Global) -->
         <div class="status-badge">
           <span class="pulse-dot"></span>
-          <span>Available for Senior Roles &middot; Remote Worldwide</span>
+          <span>Open to Remote (EU/Global)</span>
         </div>
 
         <h1 class="hero-title">
-          Hi, I'm <span class="gradient-text">Sadiq Ali Khan</span>
+          <span class="gradient-text">Sadiq Ali Khan</span>
         </h1>
 
+        <!-- Subtitle exactly matching Resume -->
         <div class="hero-role">
           <span>Senior Full-Stack Software Engineer</span>
-          <span class="separator">/</span>
-          <span>PHP 8 &amp; Symfony</span>
-          <span class="separator">/</span>
-          <span>AI Agents &amp; LLM Tooling</span>
-          <span class="separator">/</span>
-          <span>GraphQL &amp; REST</span>
-          <span class="separator">/</span>
-          <span>Root Cause Analysis (RCA)</span>
-          <span class="separator">/</span>
+          <span class="separator">|</span>
+          <span>PHP / Symfony</span>
+          <span class="separator">|</span>
+          <span>REST APIs &amp; GraphQL</span>
+          <span class="separator">|</span>
           <span>AWS &amp; Docker</span>
         </div>
 
+        <!-- Professional Summary directly from Resume -->
         <p class="hero-desc">
-          I build, scale, and debug mission-critical multi-tenant enterprise platforms and in-app AI systems. Currently leading 
-          the core API layer (~10M requests/mo), Domain-Driven multi-tenant architecture, in-app <strong>AI agent tooling</strong>, and production incident 
-          <strong>Root Cause Analysis (RCA)</strong> across 40 customer tenants on a single codebase at 
-          <strong>Qbil Software</strong> &mdash; with deep expertise across PHP 8 / Symfony, LLM tool integration, WordPress architecture, React, and AWS cloud infrastructure.
+          Senior Full-Stack Software Engineer with 5+ years of experience engineering high-scale, multi-tenant ERP and SaaS platforms. Core contributor to Symfony (25+ merged PRs) and contributor to Google's official PHP API client. Proven track record architecting high-throughput API layers (~10M requests/month), authoring public developer SDKs, optimizing MySQL query performance, and leading production reliability workflows using PHP 8, Symfony, React, TypeScript, MySQL, Redis, AWS, and Docker.
         </p>
 
-        <!-- Metadata Bar -->
+        <!-- Metadata Bar matching Resume contact line -->
         <div class="hero-meta-grid">
           <div class="meta-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             <span>Jammu &amp; Kashmir, India</span>
           </div>
           <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            <span>Senior Software Engineer @ Qbil</span>
-          </div>
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>5+ Years Production Experience</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>Open to Remote (EU/Global)</span>
           </div>
           <div class="meta-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             <a href="mailto:sadiqali94@gmail.com">sadiqali94@gmail.com</a>
           </div>
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+919596484052">+91 95964 84052</a>
+          </div>
         </div>
 
-        <!-- Action CTAs -->
+        <!-- Action CTAs matching resume links -->
         <div class="hero-ctas">
           <a href="#contact" class="btn btn-primary">
             <span>Get in Touch</span>
@@ -1466,14 +1462,19 @@
             <span class="copy-tooltip" id="copyTooltipHero">Copied! &check;</span>
           </button>
 
-          <a href="https://github.com/sadiqk2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <a href="https://github.com/Sadiqk2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span>GitHub</span>
+            <span>github.com/Sadiqk2</span>
           </a>
 
           <a href="https://linkedin.com/in/sadiq-ali-khan-39a2821b5" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             <span>LinkedIn</span>
+          </a>
+
+          <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span>developers.qbiltrade.com ↗</span>
           </a>
         </div>
       </div>
@@ -1486,12 +1487,12 @@
           <div class="stat-card">
             <div class="stat-number">40<span class="highlight">+</span></div>
             <div class="stat-label">Enterprise Tenants</div>
-            <div class="stat-sub">Zero codebase forks &middot; 2-week releases</div>
+            <div class="stat-sub">Unified codebase &middot; 99.9% uptime</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">~10<span class="highlight">M</span></div>
             <div class="stat-label">API Requests / Mo</div>
-            <div class="stat-sub">Owned GraphQL &amp; REST layer</div>
+            <div class="stat-sub">GraphQL + REST core ecosystem</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">25<span class="highlight">+</span></div>
@@ -1499,7 +1500,7 @@
             <div class="stat-sub">Merged upstream contributions</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">9.8<span class="highlight">k&starf;</span></div>
+            <div class="stat-number">9.8<span class="highlight">k★</span></div>
             <div class="stat-label">Google API Contributor</div>
             <div class="stat-sub">Official PHP Client fix shipped in v2.20.1</div>
           </div>
@@ -1507,42 +1508,36 @@
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- PROFESSIONAL SUMMARY & ARCHITECTURE -->
     <section class="section-wrap" id="about">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">01</span>
-          <h2 class="section-title">Architecting For Scale &amp; Reliability</h2>
-          <p class="section-subtitle">Bridging complex domain models, Root Cause Analysis, and production resilience.</p>
+          <h2 class="section-title">Professional Summary</h2>
+          <p class="section-subtitle">Engineering high-scale, multi-tenant ERP and SaaS platforms with proven reliability.</p>
         </div>
 
         <div class="about-layout">
           <div class="about-text">
             <p>
-              I am a <strong>Senior Full-Stack Software Engineer</strong> with over 5 years of experience architecting, shipping, 
-              and maintaining a mission-critical multi-tenant ERP platform in commodity trading and international logistics. 
-              Our single codebase powers <strong>40 enterprise customer tenants</strong> on a tight 2-week release cadence with zero forks.
+              I am a <strong>Senior Full-Stack Software Engineer</strong> with 5+ years of experience engineering high-scale, multi-tenant ERP and SaaS platforms. Core contributor to Symfony (25+ merged PRs) and contributor to Google's official PHP API client.
             </p>
             <p>
-              I own the API layer handling <strong>~10M requests every month</strong>, designing low-latency GraphQL and REST endpoints 
-              consumed both by our modern React front-end and external integrators. In addition to enterprise Symfony and modern React, 
-              I have hands-on experience building custom <strong>WordPress</strong> plugins, themes, and headless CMS integrations.
+              Proven track record architecting high-throughput API layers (<strong>~10M requests/month</strong>), authoring public developer SDKs, optimizing MySQL query performance, and leading production reliability workflows using <strong>PHP 8, Symfony, React, TypeScript, MySQL, Redis, AWS, and Docker</strong>.
             </p>
             <p>
-              A core pillar of my engineering approach is rigorous <strong>Root Cause Analysis (RCA)</strong>: when incidents occur, 
-              I trace issues down to their systemic origins across Sentry traces, database locks, and multitenant isolation boundaries, 
-              author detailed post-mortems, and mandate regression test coverage before deployment.
+              Currently architecting the multi-tenant physical commodity trading ERP <strong>Qbil-Trade</strong> serving 40 enterprise tenants from a unified codebase, ensuring strict data isolation, zero-fork customizability, and 99.9% uptime.
             </p>
           </div>
 
-          <!-- Architecture Highlight Box -->
+          <!-- Architecture & Reliability Spotlight Box -->
           <div class="architecture-box">
             <div class="arch-header">
               <span class="arch-title">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                Core Engineering Pillars
+                Core Engineering Strengths
               </span>
-              <span class="arch-pill">Systemic Quality</span>
+              <span class="arch-pill">Resume Highlights</span>
             </div>
 
             <ul class="arch-list">
@@ -1551,8 +1546,8 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
                 <div class="arch-content">
-                  <strong>Root Cause Analysis (RCA) &amp; Incident SRE</strong>
-                  <span>5-Whys systematic debugging, Sentry distributed trace correlation, post-mortem writeups, and regression-guard test suites.</span>
+                  <strong>Root-Cause Analysis (RCA) &amp; SRE</strong>
+                  <span>Spearheaded incident management across Sentry, Jira, and Zendesk; conducted root-cause analyses on critical issues to cut recurring defects.</span>
                 </div>
               </li>
               <li class="arch-item">
@@ -1560,8 +1555,8 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
                 </div>
                 <div class="arch-content">
-                  <strong>Multi-Tenant Data Isolation</strong>
-                  <span>Dynamic tenant schema orchestration, strict query boundary filters, tenant feature flag overlays.</span>
+                  <strong>Multi-Tenant ERP Architecture</strong>
+                  <span>40 enterprise tenants on a unified codebase with strict data isolation, zero-fork customizability, and 99.9% uptime.</span>
                 </div>
               </li>
               <li class="arch-item">
@@ -1569,8 +1564,8 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                 </div>
                 <div class="arch-content">
-                  <strong>High-Throughput GraphQL &amp; REST</strong>
-                  <span>Sub-millisecond resolver caching with Redis, batched DataLoader queries, and rate-limited public SDK layers.</span>
+                  <strong>API Ecosystem &amp; Public SDKs</strong>
+                  <span>GraphQL + REST (~10M req/mo), Stainless-generated public PHP SDK, and developer portal at developers.qbiltrade.com.</span>
                 </div>
               </li>
               <li class="arch-item">
@@ -1578,8 +1573,8 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                 </div>
                 <div class="arch-content">
-                  <strong>Domain-Driven Design (DDD)</strong>
-                  <span>Modeling contracts, pricing matrices, transport orders, invoicing workflows, and physical commodity positions.</span>
+                  <strong>Domain-Driven Design (DDD) &amp; TDD</strong>
+                  <span>Complex trade lifecycle domains (contracts, logistics, invoicing, inventory) on 2-week releases with ~70% test coverage.</span>
                 </div>
               </li>
             </ul>
@@ -1588,117 +1583,126 @@
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- TECHNICAL SKILLS (5 CATEGORIES FROM RESUME) -->
     <section class="section-wrap" id="skills">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">02</span>
-          <h2 class="section-title">Skills &amp; Technology Stack</h2>
-          <p class="section-subtitle">Battle-tested tools and frameworks utilized across production enterprise systems.</p>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Structured exactly as detailed in the professional résumé.</p>
         </div>
 
-        <div class="skills-grid">
-          <!-- Backend & CMS -->
+        <div class="skills-grid-5">
+          <!-- 1. Backend & APIs -->
           <div class="skill-category-card">
             <div class="cat-head">
               <div class="cat-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
               </div>
-              <h3 class="cat-title">Backend, CMS &amp; APIs</h3>
+              <h3 class="cat-title">Backend &amp; APIs</h3>
             </div>
             <div class="skills-tag-wrap">
-              <span class="tech-tag featured">PHP 8.x</span>
-              <span class="tech-tag featured">Symfony</span>
-              <span class="tech-tag featured">WordPress (Plugins &amp; Themes)</span>
+              <span class="tech-tag featured">PHP 8/7</span>
+              <span class="tech-tag featured">Symfony (MVC)</span>
+              <span class="tech-tag featured">RESTful API Design</span>
               <span class="tech-tag featured">GraphQL</span>
-              <span class="tech-tag featured">REST APIs</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Redis</span>
-              <span class="tech-tag">WP REST API</span>
-              <span class="tech-tag">WooCommerce</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">FastAPI</span>
               <span class="tech-tag">OpenAPI / Swagger</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Redis</span>
             </div>
           </div>
 
-          <!-- Reliability, RCA & DevOps -->
-          <div class="skill-category-card">
-            <div class="cat-head">
-              <div class="cat-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <h3 class="cat-title">Reliability, RCA &amp; Cloud</h3>
-            </div>
-            <div class="skills-tag-wrap">
-              <span class="tech-tag featured">Root Cause Analysis (RCA)</span>
-              <span class="tech-tag featured">Sentry Observability</span>
-              <span class="tech-tag featured">AWS (EC2, S3, RDS, WAF)</span>
-              <span class="tech-tag featured">Docker &amp; Containers</span>
-              <span class="tech-tag">Incident Post-Mortems</span>
-              <span class="tech-tag">CI/CD Pipelines</span>
-              <span class="tech-tag">Ansible</span>
-              <span class="tech-tag">Linux Server Admin</span>
-              <span class="tech-tag">Jira &amp; Zendesk Workflows</span>
-            </div>
-          </div>
-
-          <!-- Frontend & UI -->
+          <!-- 2. Frontend -->
           <div class="skill-category-card">
             <div class="cat-head">
               <div class="cat-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
               </div>
-              <h3 class="cat-title">Frontend &amp; Visualization</h3>
+              <h3 class="cat-title">Frontend</h3>
             </div>
             <div class="skills-tag-wrap">
-              <span class="tech-tag featured">React</span>
               <span class="tech-tag featured">TypeScript</span>
-              <span class="tech-tag">JavaScript (ES6+)</span>
-              <span class="tech-tag">Tailwind CSS</span>
-              <span class="tech-tag">SVG Rendering</span>
-              <span class="tech-tag">Interactive Data Viz</span>
-              <span class="tech-tag">HTML5 / Modern Web</span>
-              <span class="tech-tag">Responsive Design</span>
-              <span class="tech-tag">State Management</span>
+              <span class="tech-tag featured">JavaScript</span>
+              <span class="tech-tag featured">React</span>
+              <span class="tech-tag featured">Tailwind CSS</span>
+              <span class="tech-tag">SVG Data Visualization</span>
+              <span class="tech-tag">HTML5/CSS3</span>
             </div>
           </div>
 
-          <!-- AI Engineering & LLM Systems -->
+          <!-- 3. Cloud, DevOps & Databases -->
           <div class="skill-category-card">
             <div class="cat-head">
               <div class="cat-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
               </div>
-              <h3 class="cat-title">AI Engineering &amp; LLM Systems</h3>
+              <h3 class="cat-title">Cloud, DevOps &amp; Databases</h3>
             </div>
             <div class="skills-tag-wrap">
-              <span class="tech-tag featured">Autonomous AI Agents</span>
-              <span class="tech-tag featured">LLM API Integration</span>
-              <span class="tech-tag featured">Function Calling &amp; Tool Use</span>
-              <span class="tech-tag">Claude &amp; OpenAI APIs</span>
-              <span class="tech-tag">RAG &amp; Semantic DB Queries</span>
-              <span class="tech-tag">AI-Assisted Test Synthesis</span>
-              <span class="tech-tag">AI PR Review Workflows</span>
-              <span class="tech-tag">GitHub Copilot</span>
-              <span class="tech-tag">Prompt Engineering</span>
+              <span class="tech-tag featured">MySQL (Indexing, Query Optimization)</span>
+              <span class="tech-tag featured">AWS (EC2, S3, RDS, CloudWatch, WAF)</span>
+              <span class="tech-tag featured">Docker</span>
+              <span class="tech-tag">CI/CD (GitHub Actions)</span>
+              <span class="tech-tag">Ansible</span>
+            </div>
+          </div>
+
+          <!-- 4. Architecture & Practices -->
+          <div class="skill-category-card">
+            <div class="cat-head">
+              <div class="cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <h3 class="cat-title">Architecture &amp; Practices</h3>
+            </div>
+            <div class="skills-tag-wrap">
+              <span class="tech-tag featured">Domain-Driven Design (DDD)</span>
+              <span class="tech-tag featured">SOLID</span>
+              <span class="tech-tag featured">Multi-Tenant Architecture</span>
+              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">SDK Design</span>
+              <span class="tech-tag featured">Root-Cause Analysis (RCA)</span>
+              <span class="tech-tag">Code Review</span>
+            </div>
+          </div>
+
+          <!-- 5. Testing & Observability (Full Width) -->
+          <div class="skill-category-card full-width">
+            <div class="cat-head">
+              <div class="cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="cat-title">Testing &amp; Observability</h3>
+            </div>
+            <div class="skills-tag-wrap">
+              <span class="tech-tag featured">PHPUnit</span>
+              <span class="tech-tag featured">Jest</span>
+              <span class="tech-tag featured">TDD</span>
+              <span class="tech-tag">Static Analysis (PHPStan)</span>
+              <span class="tech-tag featured">Sentry (Observability)</span>
+              <span class="tech-tag">Git</span>
+              <span class="tech-tag">GitHub</span>
+              <span class="tech-tag">Jira</span>
+              <span class="tech-tag">Zendesk</span>
+              <span class="tech-tag featured">AI-Assisted Workflows</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
+    <!-- PROFESSIONAL EXPERIENCE (EXACT VERBATIM MATCH FROM RESUME) -->
     <section class="section-wrap" id="experience">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">03</span>
           <h2 class="section-title">Professional Experience</h2>
-          <p class="section-subtitle">Track record of building, scaling, and resolving mission-critical production systems.</p>
+          <p class="section-subtitle">Track record of building and scaling mission-critical applications.</p>
         </div>
 
         <div class="timeline">
-          <!-- Role 1: Qbil Software -->
+          <!-- Role 1: Senior Software Engineer | Qbil Software -->
           <div class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="exp-header">
@@ -1707,37 +1711,37 @@
                 <div class="exp-company">
                   <span>Qbil Software</span>
                   <span>&middot;</span>
-                  <span>Netherlands</span>
+                  <span>Remote, Netherlands</span>
                 </div>
               </div>
               <div class="exp-period">Jul 2021 &ndash; Present</div>
             </div>
 
-            <div class="exp-summary">
-              Core engineer on Qbil-Trade &mdash; enterprise multi-tenant ERP for physical commodity trading and international logistics.
+            <div class="exp-subtitle">
+              Qbil-Trade: Multi-tenant commodity trading &amp; logistics ERP (PHP 8, Symfony, GraphQL, REST, React, MySQL, Redis, AWS, Docker)
             </div>
 
             <ul class="exp-bullets">
               <li>
-                <strong>API Ownership (~10M req/mo):</strong> Architected, built, and maintain the primary GraphQL and REST API layers powering the React UI and external customer integrations, implementing robust auth, rate limiting, and structured error responses.
+                Architect and maintain the core API ecosystem (<strong>GraphQL + REST, ~10M requests/month</strong>) for <strong>40 enterprise tenants</strong> from a unified codebase, ensuring strict data isolation, zero-fork customizability, and 99.9% uptime.
               </li>
               <li>
-                <strong>Production Incident Response &amp; Root Cause Analysis (RCA):</strong> Lead end-to-end Root Cause Analysis investigations on high-severity incidents across Sentry, Zendesk, and Jira. Pinpoint multi-tenant race conditions, query deadlocks, and edge-case regressions back to their root causes; author post-mortems and enforce regression test suites to guarantee zero recurrence.
+                Engineered and shipped the public Qbil PHP SDK (PHP 8.1+, Stainless-generated) and developer documentation (<strong>developers.qbiltrade.com</strong>), providing typed, named-parameter integration with structured exception handling.
               </li>
               <li>
-                <strong>Public PHP SDK &amp; Work Deliverable Documentation:</strong> Built and shipped the official typed PHP SDK (PHP 8.1+, Stainless-generated) and authored comprehensive reference documentation at <code>developers.qbiltrade.com</code> for partner engineering teams.
+                Modeled complex trade lifecycle domains (contracts, logistics, invoicing, inventory) leveraging <strong>Domain-Driven Design (DDD)</strong> and <strong>SOLID</strong> principles, shipping cross-stack features on 2-week release cadences.
               </li>
               <li>
-                <strong>Single-Codebase Multi-Tenancy:</strong> Modeled complex commercial trading contracts, multi-currency transport, orders, inventory, and automated invoicing with DDD and SOLID principles &mdash; serving 40 distinct tenants without a single codebase fork.
+                Raised regression test coverage to <strong>~70%</strong> introducing TDD workflows with <strong>PHPUnit</strong>, adversarial PR reviews, and <strong>AI-assisted test suite generation</strong> against real network and persistence states.
               </li>
               <li>
-                <strong>In-App AI Agents &amp; LLM Workflows:</strong> Architected the "AI Assistant Hub" &mdash; an in-app AI conversational agent allowing enterprise users to query real-time multi-tenant commodity databases in natural language via curated function-calling tool sets, encapsulated SQL views, and strict tenant boundary guardrails. Integrated LLM workflows (Copilot, Claude) for AI-assisted test synthesis and automated PR reviews that raised regression test coverage to ~70%.
+                Spearheaded production incident management across <strong>Sentry, Jira, and Zendesk</strong>; conducted <strong>root-cause analyses (RCA)</strong> on critical issues and cut recurring release-related defects.
               </li>
               <li>
-                <strong>Testing &amp; Code Quality:</strong> Practiced disciplined TDD, maintain high engineering standards with atomic commits, feature branching, and mentor engineering teammates through guideline-based code reviews.
+                Containerized application stack with <strong>Docker</strong>; maintained <strong>AWS</strong> cloud workloads and automated CI/CD deployment pipelines with <strong>AWS WAF</strong> security filtering and <strong>Sentry</strong> performance tracing.
               </li>
               <li>
-                <strong>Cloud &amp; Report Infrastructure:</strong> Support containerized AWS deployments; engineered 4 dynamic customer-facing report document templates (contracts, purchase orders, transport orders, invoicing) using ReportBro with tenant customization overlays.
+                Mentored <strong>4+ engineers</strong> through code reviews, establishing team guidelines for feature branching, atomic commits, Jira-linked pull requests, and automated testing.
               </li>
             </ul>
 
@@ -1745,18 +1749,19 @@
               <span class="tech-tag">PHP 8</span>
               <span class="tech-tag">Symfony</span>
               <span class="tech-tag">GraphQL</span>
-              <span class="tech-tag">Root Cause Analysis (RCA)</span>
-              <span class="tech-tag">AI Agents &amp; LLMs</span>
+              <span class="tech-tag">REST</span>
               <span class="tech-tag">React</span>
               <span class="tech-tag">MySQL</span>
               <span class="tech-tag">Redis</span>
               <span class="tech-tag">AWS</span>
               <span class="tech-tag">Docker</span>
               <span class="tech-tag">Sentry</span>
+              <span class="tech-tag">PHPUnit</span>
+              <span class="tech-tag">RCA</span>
             </div>
           </div>
 
-          <!-- Role 2: ICloudEMS -->
+          <!-- Role 2: Full Stack Developer | ICloudEMS -->
           <div class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="exp-header">
@@ -1771,52 +1776,53 @@
               <div class="exp-period">Apr 2021 &ndash; Jul 2021</div>
             </div>
 
-            <div class="exp-summary">
-              Student-centric ERP software tailored for universities and higher education institutions.
+            <div class="exp-subtitle">
+              Student-Centric Higher-Education ERP
             </div>
 
             <ul class="exp-bullets">
-              <li>Developed and delivered core backend business logic and user interface modules for multiple college and university customers.</li>
-              <li>Administered Linux cloud servers utilized for production deployment and database operations.</li>
+              <li>
+                Built and shipped backend REST APIs (PHP/MySQL) and responsive React UI components for university clients; configured Linux cloud servers and automated staging deployments.
+              </li>
             </ul>
 
             <div class="exp-footer-tags">
               <span class="tech-tag">PHP</span>
-              <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">Linux Cloud Servers</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SELECTED WORK (WITH INTERACTIVE FILTER) -->
+    <!-- SELECTED WORK & TECHNICAL PROJECTS (FROM RESUME) -->
     <section class="section-wrap" id="work">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">04</span>
           <h2 class="section-title">Selected Work</h2>
-          <p class="section-subtitle">Real-world applications, client work items, architecture systems, and reliability tooling.</p>
+          <p class="section-subtitle">Real-world applications, developer SDKs, open tools, and architecture systems.</p>
         </div>
 
         <!-- Filter Controls -->
         <div class="filter-tabs">
           <button class="filter-btn active" data-filter="all">All Work</button>
-          <button class="filter-btn" data-filter="ai">AI &amp; LLM Systems</button>
+          <button class="filter-btn" data-filter="sdk">SDK &amp; Client Work</button>
           <button class="filter-btn" data-filter="live">Live Applications</button>
-          <button class="filter-btn" data-filter="workitem">Client &amp; Work Items</button>
-          <button class="filter-btn" data-filter="systems">Systems &amp; RCA</button>
+          <button class="filter-btn" data-filter="systems">Systems &amp; Security</button>
         </div>
 
         <div class="projects-grid" id="projectsGrid">
-          <!-- Item 1: Qbil API PHP SDK & Docs (Work Item) -->
-          <div class="project-card" data-category="workitem">
+          <!-- 1. Qbil PHP SDK & Docs (Resume Item) -->
+          <div class="project-card" data-category="sdk">
             <div class="project-top">
               <div class="proj-meta-bar">
-                <span class="proj-badge highlight">Work Item &middot; Client Deliverable</span>
+                <span class="proj-badge highlight">Shipped SDK &amp; Docs</span>
                 <div class="proj-links-top">
-                  <a href="https://github.com/sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener" class="icon-link" title="Source Code">
+                  <a href="https://github.com/Sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener" class="icon-link" title="Source Code">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                   </a>
                   <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener" class="icon-link" title="Documentation">
@@ -1826,30 +1832,30 @@
               </div>
               <h3 class="project-title">Qbil API PHP SDK &amp; Developer Docs</h3>
               <p class="project-desc">
-                Production-grade typed PHP client library for the Qbil Trading API (PHP 8.1+, Stainless generated). Provides fully typed models, named parameter requests, robust error boundaries, and auto-generated documentation portal.
+                Engineered and shipped the public Qbil PHP SDK (PHP 8.1+, Stainless-generated) and developer documentation (developers.qbiltrade.com), providing typed, named-parameter integration with structured exception handling.
               </p>
             </div>
             <div class="project-bottom">
               <div class="proj-tags">
                 <span class="tech-tag">PHP 8.1+</span>
-                <span class="tech-tag">SDK Engineering</span>
-                <span class="tech-tag">OpenAPI</span>
+                <span class="tech-tag">SDK Design</span>
                 <span class="tech-tag">Stainless</span>
+                <span class="tech-tag">OpenAPI</span>
               </div>
               <div class="proj-action-links">
-                <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener" class="text-link">Developer Docs &nearr;</a>
-                <a href="https://github.com/sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener" class="text-link">SDK Code &nearr;</a>
+                <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener" class="text-link">developers.qbiltrade.com ↗</a>
+                <a href="https://github.com/Sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener" class="text-link">Code ↗</a>
               </div>
             </div>
           </div>
 
-          <!-- Item 2: Live Markets Dashboard -->
+          <!-- 2. Live Markets Dashboard (Resume Item) -->
           <div class="project-card" data-category="live">
             <div class="project-top">
               <div class="proj-meta-bar">
                 <span class="proj-badge highlight">Live Demo</span>
                 <div class="proj-links-top">
-                  <a href="https://github.com/sadiqk2/portfolio-dashboard" target="_blank" rel="noopener" class="icon-link" title="Source Code">
+                  <a href="https://github.com/Sadiqk2/portfolio-dashboard" target="_blank" rel="noopener" class="icon-link" title="Source Code">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                   </a>
                   <a href="https://sadiqk2.github.io/portfolio-dashboard" target="_blank" rel="noopener" class="icon-link" title="Open Live Site">
@@ -1859,78 +1865,54 @@
               </div>
               <h3 class="project-title">Live Markets Dashboard</h3>
               <p class="project-desc">
-                High-performance multi-asset live dashboard integrating keyless public APIs: real-time CoinGecko crypto portfolio, ECB/Frankfurter 30-day FX trend lines, and spot gold/silver prices with custom hand-drawn SVG charts.
+                Engineered real-time financial analytics dashboard featuring SVG charting and public FX/crypto APIs. Tracks live CoinGecko crypto portfolio, 30-day ECB/Frankfurter FX trends, and gold/silver spot prices.
               </p>
             </div>
             <div class="project-bottom">
               <div class="proj-tags">
                 <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">REST APIs</span>
-                <span class="tech-tag">SVG Charts</span>
+                <span class="tech-tag">SVG Charting</span>
+                <span class="tech-tag">Public FX/Crypto APIs</span>
                 <span class="tech-tag">Data Viz</span>
               </div>
               <div class="proj-action-links">
-                <a href="https://sadiqk2.github.io/portfolio-dashboard" target="_blank" rel="noopener" class="text-link">Live App &nearr;</a>
-                <a href="https://github.com/sadiqk2/portfolio-dashboard" target="_blank" rel="noopener" class="text-link">GitHub &nearr;</a>
+                <a href="https://sadiqk2.github.io/portfolio-dashboard" target="_blank" rel="noopener" class="text-link">Live App ↗</a>
+                <a href="https://github.com/Sadiqk2/portfolio-dashboard" target="_blank" rel="noopener" class="text-link">GitHub ↗</a>
               </div>
             </div>
           </div>
 
-          <!-- Item 3: Production RCA & Incident Resolution Framework -->
+          <!-- 3. Security Tools: Leaked Password Checker (Resume Item) -->
           <div class="project-card" data-category="systems">
             <div class="project-top">
               <div class="proj-meta-bar">
-                <span class="proj-badge">Reliability &amp; RCA</span>
+                <span class="proj-badge">Security Tool</span>
               </div>
-              <h3 class="project-title">Root Cause Analysis (RCA) Framework</h3>
+              <h3 class="project-title">Leaked Password Checker</h3>
               <p class="project-desc">
-                Production-tested incident investigation framework covering 40 enterprise tenants. Implements Sentry breadcrumb tracing, database concurrency deadlock reproduction, 5-Whys post-mortems, and mandatory test coverage before hotfixes.
+                Engineered a k-anonymity password checker service with FastAPI and OpenAPI documentation. Validates credentials against breach datasets without raw password hashes ever leaving the client.
               </p>
             </div>
             <div class="project-bottom">
               <div class="proj-tags">
-                <span class="tech-tag">Root Cause Analysis</span>
-                <span class="tech-tag">Sentry</span>
-                <span class="tech-tag">Post-Mortems</span>
-                <span class="tech-tag">Regression Prevention</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">k-Anonymity</span>
+                <span class="tech-tag">OpenAPI</span>
               </div>
               <div class="proj-action-links">
-                <span class="text-link" style="color:var(--text-dim);">Enterprise SRE Methodology</span>
+                <span class="text-link" style="color:var(--text-dim);">FastAPI Service</span>
               </div>
             </div>
           </div>
 
-          <!-- Item 4: WordPress Custom Solutions & Architecture -->
-          <div class="project-card" data-category="workitem">
-            <div class="project-top">
-              <div class="proj-meta-bar">
-                <span class="proj-badge">CMS &amp; Web</span>
-              </div>
-              <h3 class="project-title">WordPress Custom Plugins &amp; Integrations</h3>
-              <p class="project-desc">
-                Custom WordPress architecture: bespoke PHP plugin development, specialized WP REST API endpoints, WooCommerce customizations, and database optimizations for content-heavy enterprise deployments.
-              </p>
-            </div>
-            <div class="project-bottom">
-              <div class="proj-tags">
-                <span class="tech-tag">WordPress</span>
-                <span class="tech-tag">PHP</span>
-                <span class="tech-tag">WP REST API</span>
-                <span class="tech-tag">Custom Plugins</span>
-              </div>
-              <div class="proj-action-links">
-                <span class="text-link" style="color:var(--text-dim);">Custom Theme &amp; Plugin Engineering</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 5: OSINT Toolkit -->
+          <!-- 4. OSINT Investigative Toolkit -->
           <div class="project-card" data-category="live">
             <div class="project-top">
               <div class="proj-meta-bar">
                 <span class="proj-badge highlight">Live Demo</span>
                 <div class="proj-links-top">
-                  <a href="https://github.com/sadiqk2/osint-toolkit" target="_blank" rel="noopener" class="icon-link" title="Source Code">
+                  <a href="https://github.com/Sadiqk2/osint-toolkit" target="_blank" rel="noopener" class="icon-link" title="Source Code">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                   </a>
                   <a href="https://sadiqk2.github.io/osint-toolkit" target="_blank" rel="noopener" class="icon-link" title="Open Live Site">
@@ -1940,7 +1922,7 @@
               </div>
               <h3 class="project-title">OSINT Investigative Toolkit</h3>
               <p class="project-desc">
-                Privacy-first, 100% client-side OSINT pivot dashboard. Generates candidate intelligence, breach searches, and cross-platform profile lookups across 60+ platforms using Web Crypto without sending data to servers.
+                Privacy-first, client-side OSINT dashboard. Performs entity lookups and profile pivots across 60+ platforms using Web Crypto without transmitting data to external servers.
               </p>
             </div>
             <div class="project-bottom">
@@ -1948,89 +1930,61 @@
                 <span class="tech-tag">JavaScript</span>
                 <span class="tech-tag">Web Crypto</span>
                 <span class="tech-tag">OSINT</span>
-                <span class="tech-tag">Cybersecurity</span>
               </div>
               <div class="proj-action-links">
-                <a href="https://sadiqk2.github.io/osint-toolkit" target="_blank" rel="noopener" class="text-link">Live App &nearr;</a>
-                <a href="https://github.com/sadiqk2/osint-toolkit" target="_blank" rel="noopener" class="text-link">Code &nearr;</a>
+                <a href="https://sadiqk2.github.io/osint-toolkit" target="_blank" rel="noopener" class="text-link">Live App ↗</a>
+                <a href="https://github.com/Sadiqk2/osint-toolkit" target="_blank" rel="noopener" class="text-link">Code ↗</a>
               </div>
             </div>
           </div>
 
-          <!-- Item 6: NativePHP for Symfony -->
-          <div class="project-card" data-category="systems">
+          <!-- 5. API Integration Examples -->
+          <div class="project-card" data-category="sdk">
             <div class="project-top">
               <div class="proj-meta-bar">
-                <span class="proj-badge">Framework &amp; Packagist</span>
+                <span class="proj-badge">Developer Reference</span>
                 <div class="proj-links-top">
-                  <a href="https://github.com/Sadiqk2/nativephp-symfony" target="_blank" rel="noopener" class="icon-link" title="Source Code">
+                  <a href="https://github.com/Sadiqk2/API-Examples" target="_blank" rel="noopener" class="icon-link" title="Source Code">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                   </a>
                 </div>
               </div>
-              <h3 class="project-title">NativePHP for Symfony</h3>
+              <h3 class="project-title">API Integration Examples</h3>
               <p class="project-desc">
-                Author &amp; maintainer of the Symfony port of NativePHP. Bridges PHP applications with Electron desktop and mobile runtimes, backed by ~1,170 automated tests and published on Packagist.
+                Production-grade sample applications demonstrating how to consume REST and GraphQL APIs with OAuth authentication, structured error handling, and robust retry logic.
               </p>
             </div>
             <div class="project-bottom">
               <div class="proj-tags">
-                <span class="tech-tag">Symfony</span>
-                <span class="tech-tag">NativePHP</span>
-                <span class="tech-tag">Electron</span>
-                <span class="tech-tag">1,170+ Tests</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">GraphQL</span>
               </div>
               <div class="proj-action-links">
-                <a href="https://github.com/Sadiqk2/nativephp-symfony" target="_blank" rel="noopener" class="text-link">GitHub Repository &nearr;</a>
+                <a href="https://github.com/Sadiqk2/API-Examples" target="_blank" rel="noopener" class="text-link">View Repository ↗</a>
               </div>
             </div>
           </div>
 
-          <!-- Item 7: Leaked Password Checker -->
+          <!-- 6. Reporting & Position Engine -->
           <div class="project-card" data-category="systems">
             <div class="project-top">
               <div class="proj-meta-bar">
-                <span class="proj-badge">Security Service</span>
+                <span class="proj-badge">Database Architecture</span>
               </div>
-              <h3 class="project-title">Leaked Password Checker</h3>
+              <h3 class="project-title">Reporting &amp; Position Engine</h3>
               <p class="project-desc">
-                Security-focused architecture featuring a lightweight frontend paired with a FastAPI microservice. Validates credentials against known leak datasets using SHA-1 k-anonymity mathematical range queries.
+                Reporting layer built on encapsulated MySQL views and indexed aggregations &mdash; computing real-time physical commercial positions, stock levels, and multi-tenant delivery metrics.
               </p>
             </div>
             <div class="project-bottom">
               <div class="proj-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">OpenAPI</span>
-                <span class="tech-tag">k-Anonymity</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Symfony</span>
+                <span class="tech-tag">Query Optimization</span>
               </div>
               <div class="proj-action-links">
-                <span class="text-link" style="color:var(--text-dim);">OpenAPI Spec Documented</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 8: AI Assistant Hub -->
-          <div class="project-card" data-category="ai">
-            <div class="project-top">
-              <div class="proj-meta-bar">
-                <span class="proj-badge highlight">AI &amp; LLM Agent</span>
-              </div>
-              <h3 class="project-title">AI Assistant Hub</h3>
-              <p class="project-desc">
-                In-app conversational AI agent allowing enterprise traders to query live multi-tenant commodity databases in natural language. Features custom tool use / function calling, domain-restricted SQL views, structured JSON output validation, and strict per-tenant data isolation guardrails.
-              </p>
-            </div>
-            <div class="project-bottom">
-              <div class="proj-tags">
-                <span class="tech-tag featured">AI Agents</span>
-                <span class="tech-tag featured">LLM Tool Calling</span>
-                <span class="tech-tag">Claude &amp; OpenAI</span>
-                <span class="tech-tag">PHP / Symfony</span>
-                <span class="tech-tag">Multi-Tenant Guardrails</span>
-              </div>
-              <div class="proj-action-links">
-                <span class="text-link" style="color:var(--text-dim);">Enterprise AI Assistant</span>
+                <span class="text-link" style="color:var(--text-dim);">Qbil-Trade Production Engine</span>
               </div>
             </div>
           </div>
@@ -2038,35 +1992,17 @@
       </div>
     </section>
 
-    <!-- OPEN SOURCE UPSTREAM SECTION -->
+    <!-- OPEN SOURCE CONTRIBUTIONS & TECHNICAL PROJECTS (EXACT RESUME MATCH) -->
     <section class="section-wrap" id="opensource">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">05</span>
-          <h2 class="section-title">Open Source Contributions</h2>
-          <p class="section-subtitle">Giving back to core developer frameworks and globally deployed libraries.</p>
+          <h2 class="section-title">Open Source Contributions &amp; Technical Projects</h2>
+          <p class="section-subtitle">Core contributions to upstream developer ecosystems and public libraries.</p>
         </div>
 
         <div class="oss-grid">
-          <!-- Symfony Core -->
-          <div class="oss-card">
-            <div>
-              <div class="oss-badge-row">
-                <span class="proj-badge">Core Contributor</span>
-                <span class="oss-stars">25+ Merged PRs</span>
-              </div>
-              <h3 class="oss-title">Symfony Framework</h3>
-              <div class="oss-role">symfony/symfony &middot; Tui Component</div>
-              <p class="oss-desc">
-                Resolved critical rendering engine defects, layout calculations, input sanitization boundaries, timer drifts, and complex Unicode/emoji string-width issues across terminal UI components. Each fix accompanied by comprehensive test suites.
-              </p>
-            </div>
-            <div>
-              <a href="https://github.com/symfony/symfony" target="_blank" rel="noopener" class="text-link">Explore Upstream Repo &nearr;</a>
-            </div>
-          </div>
-
-          <!-- Google API Client -->
+          <!-- 1. Google API PHP Client (Resume) -->
           <div class="oss-card">
             <div>
               <div class="oss-badge-row">
@@ -2074,47 +2010,66 @@
                 <span class="oss-stars">&starf; 9.8k</span>
               </div>
               <h3 class="oss-title">Google API PHP Client</h3>
-              <div class="oss-role">googleapis/google-api-php-client</div>
+              <div class="oss-role">googleapis/google-api-php-client (PR #2726)</div>
               <p class="oss-desc">
-                Fixed batch response parts mapping by aligning Content-ID headers with original request IDs. Prevented reordered server responses from inadvertently deserializing into mismatched response model classes.
+                Diagnosed and merged fix in v2.20.1 matching batch response parts by Content-ID instead of position, preventing response decoding errors into mismatched model classes (PR #2726).
               </p>
             </div>
             <div>
-              <a href="https://github.com/googleapis/google-api-php-client/pull/2726" target="_blank" rel="noopener" class="text-link">View Merged PR #2726 &nearr;</a>
+              <a href="https://github.com/googleapis/google-api-php-client/pull/2726" target="_blank" rel="noopener" class="text-link">View Merged PR #2726 ↗</a>
             </div>
           </div>
 
-          <!-- NativePHP Symfony -->
+          <!-- 2. Symfony Core Contributor (Resume) -->
           <div class="oss-card">
             <div>
               <div class="oss-badge-row">
-                <span class="proj-badge">Packagist Package</span>
-                <span class="oss-stars">1,170+ Tests</span>
+                <span class="proj-badge">Core Contributor</span>
+                <span class="oss-stars">25+ Merged PRs</span>
               </div>
-              <h3 class="oss-title">NativePHP for Symfony</h3>
-              <div class="oss-role">Author &amp; Maintainer</div>
+              <h3 class="oss-title">Symfony Framework</h3>
+              <div class="oss-role">symfony/symfony &middot; TUI Components</div>
               <p class="oss-desc">
-                Ported NativePHP's cross-platform runtime to Symfony, giving developers the power to bundle desktop and mobile apps in PHP. Contributed 11 upstream patches to core with 4 merged.
+                Active contributor to Symfony TUI components; fixed rendering bottlenecks, input sanitization, timer-drift, and multi-byte Unicode/emoji width calculations with full PHPUnit regression tests.
               </p>
             </div>
             <div>
-              <a href="https://github.com/Sadiqk2/nativephp-symfony" target="_blank" rel="noopener" class="text-link">Packagist &amp; Code &nearr;</a>
+              <a href="https://github.com/symfony/symfony" target="_blank" rel="noopener" class="text-link">symfony/symfony on GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- 3. NativePHP for Symfony (Resume) -->
+          <div class="oss-card">
+            <div>
+              <div class="oss-badge-row">
+                <span class="proj-badge">Author &amp; Maintainer</span>
+                <span class="oss-stars">1,170+ Tests</span>
+              </div>
+              <h3 class="oss-title">NativePHP for Symfony</h3>
+              <div class="oss-role">Packagist &middot; 11 Upstream Patches (4 Merged)</div>
+              <p class="oss-desc">
+                Ported Electron desktop and mobile runtimes to Symfony with 1,170+ automated tests; published on Packagist with 11 upstream patches (4 merged).
+              </p>
+            </div>
+            <div>
+              <a href="https://github.com/Sadiqk2/nativephp-symfony" target="_blank" rel="noopener" class="text-link">Packagist &amp; Code ↗</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EDUCATION & CERTIFICATIONS -->
+    <!-- EDUCATION & CERTIFICATIONS (EXACT RESUME MATCH) -->
     <section class="section-wrap" id="education">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">06</span>
-          <h2 class="section-title">Education &amp; Credentials</h2>
-          <p class="section-subtitle">Academic foundations in Computer Science and specialized DevOps certifications.</p>
+          <h2 class="section-title">Education &amp; Certifications</h2>
+          <p class="section-subtitle">Academic foundations and executive certifications.</p>
         </div>
 
         <div class="edu-grid">
+          <!-- Degree -->
           <div class="edu-card">
             <div class="edu-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
@@ -2126,14 +2081,15 @@
             </div>
           </div>
 
+          <!-- Certification -->
           <div class="edu-card">
             <div class="edu-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </div>
             <div>
-              <h3 class="edu-degree">DevOps Engineer Certification</h3>
-              <div class="edu-school">IIT Roorkee (Intellipaat)</div>
-              <div class="edu-date">Jan 2021 &ndash; Mar 2021</div>
+              <h3 class="edu-degree">Executive Certification in DevOps Engineering</h3>
+              <div class="edu-school">IIT Roorkee / Intellipaat</div>
+              <div class="edu-date">2021</div>
             </div>
           </div>
         </div>
@@ -2145,16 +2101,15 @@
       <div class="container">
         <div class="contact-card">
           <span class="section-eyebrow" style="color:var(--accent);">Let's Connect</span>
-          <h2 class="contact-title">Ready To Build &amp; Scale Together?</h2>
+          <h2 class="contact-title">Ready To Connect?</h2>
           <p class="contact-lead">
-            I am open to senior engineering roles and technical leadership opportunities (Remote Worldwide / Flexible). 
-            Feel free to reach out via email, phone, or LinkedIn.
+            Open to Remote (EU/Global) opportunities. Reach out directly via email, phone, or LinkedIn.
           </p>
 
           <div class="contact-button-row">
             <a href="mailto:sadiqali94@gmail.com" class="btn btn-primary">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              <span>Email: sadiqali94@gmail.com</span>
+              <span>sadiqali94@gmail.com</span>
             </a>
 
             <button class="btn btn-secondary btn-copy-toast" id="copyEmailContactBtn" title="Copy email address">
@@ -2170,12 +2125,17 @@
 
             <a href="https://linkedin.com/in/sadiq-ali-khan-39a2821b5" target="_blank" rel="noopener" class="btn btn-secondary">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              <span>LinkedIn Profile</span>
+              <span>LinkedIn</span>
             </a>
 
-            <a href="https://github.com/sadiqk2" target="_blank" rel="noopener" class="btn btn-secondary">
+            <a href="https://github.com/Sadiqk2" target="_blank" rel="noopener" class="btn btn-secondary">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
               <span>GitHub</span>
+            </a>
+
+            <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              <span>developers.qbiltrade.com ↗</span>
             </a>
           </div>
         </div>
@@ -2188,12 +2148,12 @@
     <div class="container">
       <div class="footer-inner">
         <div>
-          &copy; <span id="year">2026</span> Sadiq Ali Khan &middot; Crafted with pure HTML, CSS &amp; vanilla JS &middot; Hosted on GitHub Pages
+          &copy; <span id="year">2026</span> Sadiq Ali Khan &middot; Built with pure HTML &amp; CSS &middot; Hosted on GitHub Pages
         </div>
         <ul class="footer-links">
           <li><a href="#hero">Back to Top &uarr;</a></li>
-          <li><a href="https://github.com/sadiqk2/sadiqk2.github.io" target="_blank" rel="noopener">Site Repository</a></li>
-          <li><a href="https://linkedin.com/in/sadiq-ali-khan-39a2821b5" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/Sadiqk2/sadiqk2.github.io" target="_blank" rel="noopener">Repository</a></li>
+          <li><a href="https://developers.qbiltrade.com" target="_blank" rel="noopener">developers.qbiltrade.com</a></li>
         </ul>
       </div>
     </div>
@@ -2212,7 +2172,6 @@
       const moonIcon = document.getElementById('moonIcon');
       const htmlEl = document.documentElement;
 
-      // Check saved preference or system preference
       const savedTheme = localStorage.getItem('sadiq_theme');
       if (savedTheme) {
         htmlEl.setAttribute('data-theme', savedTheme);
