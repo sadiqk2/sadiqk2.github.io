@@ -1416,6 +1416,8 @@
           <span class="separator">/</span>
           <span>PHP 8 &amp; Symfony</span>
           <span class="separator">/</span>
+          <span>AI Agents &amp; LLM Tooling</span>
+          <span class="separator">/</span>
           <span>GraphQL &amp; REST</span>
           <span class="separator">/</span>
           <span>Root Cause Analysis (RCA)</span>
@@ -1424,10 +1426,10 @@
         </div>
 
         <p class="hero-desc">
-          I build, scale, and debug mission-critical multi-tenant enterprise platforms. Currently leading 
-          the core API layer (~10M requests/mo), Domain-Driven multi-tenant architecture, and production incident 
+          I build, scale, and debug mission-critical multi-tenant enterprise platforms and in-app AI systems. Currently leading 
+          the core API layer (~10M requests/mo), Domain-Driven multi-tenant architecture, in-app <strong>AI agent tooling</strong>, and production incident 
           <strong>Root Cause Analysis (RCA)</strong> across 40 customer tenants on a single codebase at 
-          <strong>Qbil Software</strong> &mdash; with extensive experience across PHP 8 / Symfony, WordPress plugin architecture, React, and AWS cloud infrastructure.
+          <strong>Qbil Software</strong> &mdash; with deep expertise across PHP 8 / Symfony, LLM tool integration, WordPress architecture, React, and AWS cloud infrastructure.
         </p>
 
         <!-- Metadata Bar -->
@@ -1662,22 +1664,24 @@
             </div>
           </div>
 
-          <!-- Software Practices & AI -->
+          <!-- AI Engineering & LLM Systems -->
           <div class="skill-category-card">
             <div class="cat-head">
               <div class="cat-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
               </div>
-              <h3 class="cat-title">Practices &amp; AI Tooling</h3>
+              <h3 class="cat-title">AI Engineering &amp; LLM Systems</h3>
             </div>
             <div class="skills-tag-wrap">
-              <span class="tech-tag featured">Domain-Driven Design (DDD)</span>
-              <span class="tech-tag featured">Multi-Tenant Architecture</span>
-              <span class="tech-tag">Test-Driven Dev (TDD)</span>
-              <span class="tech-tag">SOLID Principles</span>
-              <span class="tech-tag">LLM Agents Integration</span>
-              <span class="tech-tag">AI-Assisted Testing</span>
-              <span class="tech-tag">Code Review &amp; Mentorship</span>
+              <span class="tech-tag featured">Autonomous AI Agents</span>
+              <span class="tech-tag featured">LLM API Integration</span>
+              <span class="tech-tag featured">Function Calling &amp; Tool Use</span>
+              <span class="tech-tag">Claude &amp; OpenAI APIs</span>
+              <span class="tech-tag">RAG &amp; Semantic DB Queries</span>
+              <span class="tech-tag">AI-Assisted Test Synthesis</span>
+              <span class="tech-tag">AI PR Review Workflows</span>
+              <span class="tech-tag">GitHub Copilot</span>
+              <span class="tech-tag">Prompt Engineering</span>
             </div>
           </div>
         </div>
@@ -1727,7 +1731,10 @@
                 <strong>Single-Codebase Multi-Tenancy:</strong> Modeled complex commercial trading contracts, multi-currency transport, orders, inventory, and automated invoicing with DDD and SOLID principles &mdash; serving 40 distinct tenants without a single codebase fork.
               </li>
               <li>
-                <strong>Testing &amp; Code Quality:</strong> Increased regression test coverage to ~70% using TDD and AI-assisted test workflows; mentor engineering teammates through structured guideline-based code reviews and atomic commits.
+                <strong>In-App AI Agents &amp; LLM Workflows:</strong> Architected the "AI Assistant Hub" &mdash; an in-app AI conversational agent allowing enterprise users to query real-time multi-tenant commodity databases in natural language via curated function-calling tool sets, encapsulated SQL views, and strict tenant boundary guardrails. Integrated LLM workflows (Copilot, Claude) for AI-assisted test synthesis and automated PR reviews that raised regression test coverage to ~70%.
+              </li>
+              <li>
+                <strong>Testing &amp; Code Quality:</strong> Practiced disciplined TDD, maintain high engineering standards with atomic commits, feature branching, and mentor engineering teammates through guideline-based code reviews.
               </li>
               <li>
                 <strong>Cloud &amp; Report Infrastructure:</strong> Support containerized AWS deployments; engineered 4 dynamic customer-facing report document templates (contracts, purchase orders, transport orders, invoicing) using ReportBro with tenant customization overlays.
@@ -1739,6 +1746,7 @@
               <span class="tech-tag">Symfony</span>
               <span class="tech-tag">GraphQL</span>
               <span class="tech-tag">Root Cause Analysis (RCA)</span>
+              <span class="tech-tag">AI Agents &amp; LLMs</span>
               <span class="tech-tag">React</span>
               <span class="tech-tag">MySQL</span>
               <span class="tech-tag">Redis</span>
@@ -1795,9 +1803,10 @@
         <!-- Filter Controls -->
         <div class="filter-tabs">
           <button class="filter-btn active" data-filter="all">All Work</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; LLM Systems</button>
           <button class="filter-btn" data-filter="live">Live Applications</button>
           <button class="filter-btn" data-filter="workitem">Client &amp; Work Items</button>
-          <button class="filter-btn" data-filter="systems">Systems, Security &amp; RCA</button>
+          <button class="filter-btn" data-filter="systems">Systems &amp; RCA</button>
         </div>
 
         <div class="projects-grid" id="projectsGrid">
@@ -2002,25 +2011,26 @@
           </div>
 
           <!-- Item 8: AI Assistant Hub -->
-          <div class="project-card" data-category="systems">
+          <div class="project-card" data-category="ai">
             <div class="project-top">
               <div class="proj-meta-bar">
-                <span class="proj-badge">LLM &amp; Multi-Tenant</span>
+                <span class="proj-badge highlight">AI &amp; LLM Agent</span>
               </div>
               <h3 class="project-title">AI Assistant Hub</h3>
               <p class="project-desc">
-                In-app AI assistant agent executing semantic queries over live customer tenant data via curated tool sets, domain-restricted SQL views, and schema guards for strict multi-tenant boundary compliance.
+                In-app conversational AI agent allowing enterprise traders to query live multi-tenant commodity databases in natural language. Features custom tool use / function calling, domain-restricted SQL views, structured JSON output validation, and strict per-tenant data isolation guardrails.
               </p>
             </div>
             <div class="project-bottom">
               <div class="proj-tags">
-                <span class="tech-tag">PHP</span>
-                <span class="tech-tag">LLM Agents</span>
-                <span class="tech-tag">Tool Use</span>
-                <span class="tech-tag">Symfony</span>
+                <span class="tech-tag featured">AI Agents</span>
+                <span class="tech-tag featured">LLM Tool Calling</span>
+                <span class="tech-tag">Claude &amp; OpenAI</span>
+                <span class="tech-tag">PHP / Symfony</span>
+                <span class="tech-tag">Multi-Tenant Guardrails</span>
               </div>
               <div class="proj-action-links">
-                <span class="text-link" style="color:var(--text-dim);">Enterprise Internal Tool</span>
+                <span class="text-link" style="color:var(--text-dim);">Enterprise AI Assistant</span>
               </div>
             </div>
           </div>
