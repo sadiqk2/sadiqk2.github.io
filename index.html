@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sadiq Ali Khan &mdash; Senior Full-Stack Software Engineer</title>
   
-  <meta name="description" content="Sadiq Ali Khan &mdash; Senior Full-Stack Software Engineer. Multi-tenant ERP architecture (PHP 8 / Symfony, React, AWS), ~10M API req/mo, 25+ Symfony core PRs, Google API contributor.">
+  <meta name="description" content="Sadiq Ali Khan &mdash; Senior Full-Stack Software Engineer. Multi-tenant ERP architecture (PHP 8 / Symfony, React, AWS), ~10M API req/mo, Root Cause Analysis (RCA), WordPress, 25+ Symfony core PRs.">
   <meta name="author" content="Sadiq Ali Khan">
-  <meta name="keywords" content="Sadiq Ali Khan, Full-Stack Engineer, Senior Software Engineer, Symfony, PHP 8, GraphQL, REST API, React, AWS, Multi-tenant ERP, Open Source">
+  <meta name="keywords" content="Sadiq Ali Khan, Full-Stack Engineer, Senior Software Engineer, Symfony, PHP 8, GraphQL, REST API, React, AWS, Multi-tenant ERP, WordPress, Root Cause Analysis, RCA, Open Source">
   
   <!-- Open Graph / Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sadiqk2.github.io/">
   <meta property="og:title" content="Sadiq Ali Khan &mdash; Senior Full-Stack Software Engineer">
-  <meta property="og:description" content="Senior Full-Stack Engineer building a production multi-tenant ERP (40 tenants, ~10M API req/mo, PHP 8 / Symfony, React, AWS). Symfony core contributor.">
+  <meta property="og:description" content="Senior Full-Stack Engineer building a production multi-tenant ERP (40 tenants, ~10M API req/mo, PHP 8 / Symfony, React, AWS). Expert in Root Cause Analysis (RCA) and Symfony core contributor.">
   <meta property="og:site_name" content="Sadiq Ali Khan Portfolio">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sadiq Ali Khan &mdash; Senior Full-Stack Software Engineer">
-  <meta name="twitter:description" content="Senior Full-Stack Engineer building high-scale multi-tenant ERP systems, APIs & developer tooling. Symfony core contributor.">
+  <meta name="twitter:description" content="Senior Full-Stack Engineer building high-scale multi-tenant ERP systems, APIs, developer tooling, and RCA post-mortems.">
   
   <!-- Favicon (Inlined SVG) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230b1120'/><text x='50' y='64' font-family='system-ui,sans-serif' font-size='44' font-weight='800' fill='%2338bdf8' text-anchor='middle'>SK</text></svg>">
@@ -57,6 +57,7 @@
       --brand-amber: #fbbf24;
       --brand-emerald: #10b981;
       --brand-purple: #a855f7;
+      --brand-rose: #f43f5e;
       
       --nav-bg: rgba(9, 13, 22, 0.85);
       --badge-bg: rgba(255, 255, 255, 0.04);
@@ -344,7 +345,7 @@
     .hero-desc {
       font-size: clamp(1.05rem, 1.5vw, 1.2rem);
       color: var(--text-muted);
-      max-width: 780px;
+      max-width: 820px;
       line-height: 1.65;
       margin-bottom: 32px;
     }
@@ -847,7 +848,7 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 20px;
     }
 
@@ -1204,7 +1205,7 @@
     .contact-lead {
       color: var(--text-muted);
       font-size: 1.1rem;
-      max-width: 600px;
+      max-width: 620px;
       margin: 0 auto 32px;
     }
 
@@ -1344,7 +1345,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects">Work &amp; Projects</a></li>
             <li><a href="#opensource">Open Source</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -1390,7 +1391,7 @@
     <a href="#about" class="mobile-link">About</a>
     <a href="#skills" class="mobile-link">Skills &amp; Tooling</a>
     <a href="#experience" class="mobile-link">Experience</a>
-    <a href="#projects" class="mobile-link">Selected Projects</a>
+    <a href="#projects" class="mobile-link">Work &amp; Projects</a>
     <a href="#opensource" class="mobile-link">Open Source</a>
     <a href="#education" class="mobile-link">Education</a>
     <a href="#contact" class="mobile-link">Contact</a>
@@ -1403,7 +1404,7 @@
         <!-- Availability Radar Badge -->
         <div class="status-badge">
           <span class="pulse-dot"></span>
-          <span>Open to Senior Roles &middot; Remote (EU Overlap)</span>
+          <span>Available for Senior Roles &middot; Remote Worldwide</span>
         </div>
 
         <h1 class="hero-title">
@@ -1417,13 +1418,16 @@
           <span class="separator">/</span>
           <span>GraphQL &amp; REST</span>
           <span class="separator">/</span>
+          <span>Root Cause Analysis (RCA)</span>
+          <span class="separator">/</span>
           <span>AWS &amp; Docker</span>
         </div>
 
         <p class="hero-desc">
-          I build and operate high-scale multi-tenant enterprise platforms. Currently architecting 
-          the core API layer (~10M requests/mo) and multi-tenant systems for 40 enterprise tenants on a single codebase 
-          at <strong>Qbil Software</strong> &mdash; spanning React UIs, public SDKs, Symfony backend services, and AWS cloud infrastructure.
+          I build, scale, and debug mission-critical multi-tenant enterprise platforms. Currently leading 
+          the core API layer (~10M requests/mo), Domain-Driven multi-tenant architecture, and production incident 
+          <strong>Root Cause Analysis (RCA)</strong> across 40 customer tenants on a single codebase at 
+          <strong>Qbil Software</strong> &mdash; with extensive experience across PHP 8 / Symfony, WordPress plugin architecture, React, and AWS cloud infrastructure.
         </p>
 
         <!-- Metadata Bar -->
@@ -1469,11 +1473,6 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             <span>LinkedIn</span>
           </a>
-
-          <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            <span>API Docs &nearr;</span>
-          </a>
         </div>
       </div>
     </section>
@@ -1512,27 +1511,25 @@
         <div class="section-header">
           <span class="section-eyebrow">01</span>
           <h2 class="section-title">Architecting For Scale &amp; Reliability</h2>
-          <p class="section-subtitle">Bridging complex domain models, developer tooling, and production resilience.</p>
+          <p class="section-subtitle">Bridging complex domain models, Root Cause Analysis, and production resilience.</p>
         </div>
 
         <div class="about-layout">
           <div class="about-text">
             <p>
-              I am a <strong>Senior Full-Stack Software Engineer</strong> with over 5 years of experience designing, shipping, 
-              and maintaining a mission-critical multi-tenant ERP platform in commodity trading and physical logistics. 
-              Our single codebase powers <strong>40 customer tenants</strong> on a tight 2-week release cadence with zero forks.
+              I am a <strong>Senior Full-Stack Software Engineer</strong> with over 5 years of experience architecting, shipping, 
+              and maintaining a mission-critical multi-tenant ERP platform in commodity trading and international logistics. 
+              Our single codebase powers <strong>40 enterprise customer tenants</strong> on a tight 2-week release cadence with zero forks.
             </p>
             <p>
-              I lead the API layer handling <strong>~10M requests every month</strong>, architecting GraphQL and REST endpoints 
-              consumed both by our modern React front-end and by external enterprise integrators. I also created and published 
-              the official <strong>typed PHP SDK</strong> and its developer documentation at 
-              <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">developers.qbiltrade.com</a>.
+              I own the API layer handling <strong>~10M requests every month</strong>, designing low-latency GraphQL and REST endpoints 
+              consumed both by our modern React front-end and external integrators. In addition to enterprise Symfony and modern React, 
+              I have hands-on experience building custom <strong>WordPress</strong> plugins, themes, and headless CMS integrations.
             </p>
             <p>
-              My engineering philosophy revolves around <strong>Domain-Driven Design (DDD)</strong>, dependable and boring code, 
-              deep observability (Sentry, real-time logging, root-cause analyses), and thorough automated testing. Beyond day-to-day 
-              product delivery, I am an active open source contributor with <strong>25+ merged PRs to Symfony core</strong> 
-              and patches in <strong>Google's official PHP API client</strong>.
+              A core pillar of my engineering approach is rigorous <strong>Root Cause Analysis (RCA)</strong>: when incidents occur, 
+              I trace issues down to their systemic origins across Sentry traces, database locks, and multitenant isolation boundaries, 
+              author detailed post-mortems, and mandate regression test coverage before deployment.
             </p>
           </div>
 
@@ -1541,19 +1538,28 @@
             <div class="arch-header">
               <span class="arch-title">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                Core Architecture Focus
+                Core Engineering Pillars
               </span>
-              <span class="arch-pill">Production Scale</span>
+              <span class="arch-pill">Systemic Quality</span>
             </div>
 
             <ul class="arch-list">
+              <li class="arch-item">
+                <div class="arch-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="arch-content">
+                  <strong>Root Cause Analysis (RCA) &amp; Incident SRE</strong>
+                  <span>5-Whys systematic debugging, Sentry distributed trace correlation, post-mortem writeups, and regression-guard test suites.</span>
+                </div>
+              </li>
               <li class="arch-item">
                 <div class="arch-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
                 </div>
                 <div class="arch-content">
                   <strong>Multi-Tenant Data Isolation</strong>
-                  <span>Dynamic per-tenant schema, strict query isolation, tenant configuration overlays.</span>
+                  <span>Dynamic tenant schema orchestration, strict query boundary filters, tenant feature flag overlays.</span>
                 </div>
               </li>
               <li class="arch-item">
@@ -1562,25 +1568,16 @@
                 </div>
                 <div class="arch-content">
                   <strong>High-Throughput GraphQL &amp; REST</strong>
-                  <span>Low latency query optimization, batched resolvers, Redis caching, rate limiting.</span>
+                  <span>Sub-millisecond resolver caching with Redis, batched DataLoader queries, and rate-limited public SDK layers.</span>
                 </div>
               </li>
               <li class="arch-item">
                 <div class="arch-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                 </div>
                 <div class="arch-content">
                   <strong>Domain-Driven Design (DDD)</strong>
-                  <span>Commodity trading, contracts, invoicing, transport logistics, and position calculations.</span>
-                </div>
-              </li>
-              <li class="arch-item">
-                <div class="arch-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div class="arch-content">
-                  <strong>Incident Management &amp; RCA</strong>
-                  <span>Production monitoring across Sentry/Zendesk, regression isolation, zero-downtime updates.</span>
+                  <span>Modeling contracts, pricing matrices, transport orders, invoicing workflows, and physical commodity positions.</span>
                 </div>
               </li>
             </ul>
@@ -1599,25 +1596,48 @@
         </div>
 
         <div class="skills-grid">
-          <!-- Backend & APIs -->
+          <!-- Backend & CMS -->
           <div class="skill-category-card">
             <div class="cat-head">
               <div class="cat-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
               </div>
-              <h3 class="cat-title">Backend &amp; API Architecture</h3>
+              <h3 class="cat-title">Backend, CMS &amp; APIs</h3>
             </div>
             <div class="skills-tag-wrap">
               <span class="tech-tag featured">PHP 8.x</span>
               <span class="tech-tag featured">Symfony</span>
+              <span class="tech-tag featured">WordPress (Plugins &amp; Themes)</span>
               <span class="tech-tag featured">GraphQL</span>
               <span class="tech-tag featured">REST APIs</span>
               <span class="tech-tag">MySQL</span>
               <span class="tech-tag">Redis</span>
-              <span class="tech-tag">OpenAPI / Swagger</span>
+              <span class="tech-tag">WP REST API</span>
+              <span class="tech-tag">WooCommerce</span>
               <span class="tech-tag">Python</span>
               <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Stainless SDK Generator</span>
+              <span class="tech-tag">OpenAPI / Swagger</span>
+            </div>
+          </div>
+
+          <!-- Reliability, RCA & DevOps -->
+          <div class="skill-category-card">
+            <div class="cat-head">
+              <div class="cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="cat-title">Reliability, RCA &amp; Cloud</h3>
+            </div>
+            <div class="skills-tag-wrap">
+              <span class="tech-tag featured">Root Cause Analysis (RCA)</span>
+              <span class="tech-tag featured">Sentry Observability</span>
+              <span class="tech-tag featured">AWS (EC2, S3, RDS, WAF)</span>
+              <span class="tech-tag featured">Docker &amp; Containers</span>
+              <span class="tech-tag">Incident Post-Mortems</span>
+              <span class="tech-tag">CI/CD Pipelines</span>
+              <span class="tech-tag">Ansible</span>
+              <span class="tech-tag">Linux Server Admin</span>
+              <span class="tech-tag">Jira &amp; Zendesk Workflows</span>
             </div>
           </div>
 
@@ -1642,43 +1662,22 @@
             </div>
           </div>
 
-          <!-- Cloud & DevOps -->
-          <div class="skill-category-card">
-            <div class="cat-head">
-              <div class="cat-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-              </div>
-              <h3 class="cat-title">Cloud, DevOps &amp; Reliability</h3>
-            </div>
-            <div class="skills-tag-wrap">
-              <span class="tech-tag featured">AWS (EC2, S3, RDS, WAF)</span>
-              <span class="tech-tag featured">Docker &amp; Containers</span>
-              <span class="tech-tag">CI/CD Pipelines</span>
-              <span class="tech-tag">Sentry Observability</span>
-              <span class="tech-tag">Git / GitHub Actions</span>
-              <span class="tech-tag">Ansible</span>
-              <span class="tech-tag">Linux Server Admin</span>
-              <span class="tech-tag">Jira &amp; Zendesk</span>
-            </div>
-          </div>
-
           <!-- Software Practices & AI -->
           <div class="skill-category-card">
             <div class="cat-head">
               <div class="cat-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
               </div>
-              <h3 class="cat-title">Engineering Practices &amp; AI</h3>
+              <h3 class="cat-title">Practices &amp; AI Tooling</h3>
             </div>
             <div class="skills-tag-wrap">
               <span class="tech-tag featured">Domain-Driven Design (DDD)</span>
-              <span class="tech-tag featured">Multi-Tenant Systems</span>
+              <span class="tech-tag featured">Multi-Tenant Architecture</span>
               <span class="tech-tag">Test-Driven Dev (TDD)</span>
               <span class="tech-tag">SOLID Principles</span>
               <span class="tech-tag">LLM Agents Integration</span>
-              <span class="tech-tag">AI-Assisted Testing &amp; Review</span>
-              <span class="tech-tag">Incident Root-Cause Analysis</span>
-              <span class="tech-tag">Engineering Mentorship</span>
+              <span class="tech-tag">AI-Assisted Testing</span>
+              <span class="tech-tag">Code Review &amp; Mentorship</span>
             </div>
           </div>
         </div>
@@ -1691,7 +1690,7 @@
         <div class="section-header">
           <span class="section-eyebrow">03</span>
           <h2 class="section-title">Professional Experience</h2>
-          <p class="section-subtitle">Track record of building and scaling mission-critical applications.</p>
+          <p class="section-subtitle">Track record of building, scaling, and resolving mission-critical production systems.</p>
         </div>
 
         <div class="timeline">
@@ -1704,7 +1703,7 @@
                 <div class="exp-company">
                   <span>Qbil Software</span>
                   <span>&middot;</span>
-                  <span>Remote (Netherlands)</span>
+                  <span>Netherlands</span>
                 </div>
               </div>
               <div class="exp-period">Jul 2021 &ndash; Present</div>
@@ -1719,13 +1718,13 @@
                 <strong>API Ownership (~10M req/mo):</strong> Architected, built, and maintain the primary GraphQL and REST API layers powering the React UI and external customer integrations, implementing robust auth, rate limiting, and structured error responses.
               </li>
               <li>
-                <strong>Public PHP SDK &amp; Developer Docs:</strong> Created and published the official typed PHP SDK (PHP 8.1+, Stainless-generated) and comprehensive developer documentation at <code>developers.qbiltrade.com</code>.
+                <strong>Production Incident Response &amp; Root Cause Analysis (RCA):</strong> Lead end-to-end Root Cause Analysis investigations on high-severity incidents across Sentry, Zendesk, and Jira. Pinpoint multi-tenant race conditions, query deadlocks, and edge-case regressions back to their root causes; author post-mortems and enforce regression test suites to guarantee zero recurrence.
+              </li>
+              <li>
+                <strong>Public PHP SDK &amp; Work Deliverable Documentation:</strong> Built and shipped the official typed PHP SDK (PHP 8.1+, Stainless-generated) and authored comprehensive reference documentation at <code>developers.qbiltrade.com</code> for partner engineering teams.
               </li>
               <li>
                 <strong>Single-Codebase Multi-Tenancy:</strong> Modeled complex commercial trading contracts, multi-currency transport, orders, inventory, and automated invoicing with DDD and SOLID principles &mdash; serving 40 distinct tenants without a single codebase fork.
-              </li>
-              <li>
-                <strong>Production Incident Response &amp; RCA:</strong> Actively lead root-cause investigations across Sentry, Zendesk, and Jira; author post-mortems, resolve regressions, and publish client-facing release notes every 2 weeks.
               </li>
               <li>
                 <strong>Testing &amp; Code Quality:</strong> Increased regression test coverage to ~70% using TDD and AI-assisted test workflows; mentor engineering teammates through structured guideline-based code reviews and atomic commits.
@@ -1739,6 +1738,7 @@
               <span class="tech-tag">PHP 8</span>
               <span class="tech-tag">Symfony</span>
               <span class="tech-tag">GraphQL</span>
+              <span class="tech-tag">Root Cause Analysis (RCA)</span>
               <span class="tech-tag">React</span>
               <span class="tech-tag">MySQL</span>
               <span class="tech-tag">Redis</span>
@@ -1776,32 +1776,65 @@
               <span class="tech-tag">PHP</span>
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Cloud Servers</span>
+              <span class="tech-tag">Linux</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SELECTED PROJECTS (WITH INTERACTIVE FILTER) -->
+    <!-- SELECTED PROJECTS / WORK (WITH INTERACTIVE FILTER) -->
     <section class="section-wrap" id="projects">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">04</span>
-          <h2 class="section-title">Selected Projects</h2>
-          <p class="section-subtitle">Real-world applications, developer SDKs, open tools, and architecture systems.</p>
+          <h2 class="section-title">Selected Work &amp; Projects</h2>
+          <p class="section-subtitle">Real-world applications, client work items, architecture systems, and reliability tooling.</p>
         </div>
 
         <!-- Filter Controls -->
         <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn active" data-filter="all">All Work</button>
           <button class="filter-btn" data-filter="live">Live Applications</button>
-          <button class="filter-btn" data-filter="sdk">SDKs &amp; APIs</button>
-          <button class="filter-btn" data-filter="systems">Systems &amp; Security</button>
+          <button class="filter-btn" data-filter="workitem">Client &amp; Work Items</button>
+          <button class="filter-btn" data-filter="systems">Systems, Security &amp; RCA</button>
         </div>
 
         <div class="projects-grid" id="projectsGrid">
-          <!-- Project 1: Live Markets Dashboard -->
+          <!-- Item 1: Qbil API PHP SDK & Docs (Work Item) -->
+          <div class="project-card" data-category="workitem">
+            <div class="project-top">
+              <div class="proj-meta-bar">
+                <span class="proj-badge highlight">Work Item &middot; Client Deliverable</span>
+                <div class="proj-links-top">
+                  <a href="https://github.com/sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener" class="icon-link" title="Source Code">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </a>
+                  <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener" class="icon-link" title="Documentation">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Qbil API PHP SDK &amp; Developer Docs</h3>
+              <p class="project-desc">
+                Production-grade typed PHP client library for the Qbil Trading API (PHP 8.1+, Stainless generated). Provides fully typed models, named parameter requests, robust error boundaries, and auto-generated documentation portal.
+              </p>
+            </div>
+            <div class="project-bottom">
+              <div class="proj-tags">
+                <span class="tech-tag">PHP 8.1+</span>
+                <span class="tech-tag">SDK Engineering</span>
+                <span class="tech-tag">OpenAPI</span>
+                <span class="tech-tag">Stainless</span>
+              </div>
+              <div class="proj-action-links">
+                <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener" class="text-link">Developer Docs &nearr;</a>
+                <a href="https://github.com/sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener" class="text-link">SDK Code &nearr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Live Markets Dashboard -->
           <div class="project-card" data-category="live">
             <div class="project-top">
               <div class="proj-meta-bar">
@@ -1834,40 +1867,55 @@
             </div>
           </div>
 
-          <!-- Project 2: Qbil API PHP SDK -->
-          <div class="project-card" data-category="sdk">
+          <!-- Item 3: Production RCA & Incident Resolution Framework -->
+          <div class="project-card" data-category="systems">
             <div class="project-top">
               <div class="proj-meta-bar">
-                <span class="proj-badge">SDK &amp; Docs</span>
-                <div class="proj-links-top">
-                  <a href="https://github.com/sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener" class="icon-link" title="Source Code">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                  </a>
-                  <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener" class="icon-link" title="Documentation">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                  </a>
-                </div>
+                <span class="proj-badge">Reliability &amp; RCA</span>
               </div>
-              <h3 class="project-title">Qbil API PHP SDK</h3>
+              <h3 class="project-title">Root Cause Analysis (RCA) Framework</h3>
               <p class="project-desc">
-                Production-grade typed PHP client library for the Qbil Trading API (PHP 8.1+, Stainless generated). Provides fully typed models, named parameter requests, robust error boundaries, and auto-generated docs.
+                Production-tested incident investigation framework covering 40 enterprise tenants. Implements Sentry breadcrumb tracing, database concurrency deadlock reproduction, 5-Whys post-mortems, and mandatory test coverage before hotfixes.
               </p>
             </div>
             <div class="project-bottom">
               <div class="proj-tags">
-                <span class="tech-tag">PHP 8.1+</span>
-                <span class="tech-tag">SDK Design</span>
-                <span class="tech-tag">OpenAPI</span>
-                <span class="tech-tag">Stainless</span>
+                <span class="tech-tag">Root Cause Analysis</span>
+                <span class="tech-tag">Sentry</span>
+                <span class="tech-tag">Post-Mortems</span>
+                <span class="tech-tag">Regression Prevention</span>
               </div>
               <div class="proj-action-links">
-                <a href="https://developers.qbiltrade.com" target="_blank" rel="noopener" class="text-link">Live Docs &nearr;</a>
-                <a href="https://github.com/sadiqk2/api-php-sdk-qbil" target="_blank" rel="noopener" class="text-link">Code &nearr;</a>
+                <span class="text-link" style="color:var(--text-dim);">Enterprise SRE Methodology</span>
               </div>
             </div>
           </div>
 
-          <!-- Project 3: OSINT Toolkit -->
+          <!-- Item 4: WordPress Custom Solutions & Architecture -->
+          <div class="project-card" data-category="workitem">
+            <div class="project-top">
+              <div class="proj-meta-bar">
+                <span class="proj-badge">CMS &amp; Web</span>
+              </div>
+              <h3 class="project-title">WordPress Custom Plugins &amp; Integrations</h3>
+              <p class="project-desc">
+                Custom WordPress architecture: bespoke PHP plugin development, specialized WP REST API endpoints, WooCommerce customizations, and database optimizations for content-heavy enterprise deployments.
+              </p>
+            </div>
+            <div class="project-bottom">
+              <div class="proj-tags">
+                <span class="tech-tag">WordPress</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">WP REST API</span>
+                <span class="tech-tag">Custom Plugins</span>
+              </div>
+              <div class="proj-action-links">
+                <span class="text-link" style="color:var(--text-dim);">Custom Theme &amp; Plugin Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: OSINT Toolkit -->
           <div class="project-card" data-category="live">
             <div class="project-top">
               <div class="proj-meta-bar">
@@ -1900,7 +1948,7 @@
             </div>
           </div>
 
-          <!-- Project 4: NativePHP for Symfony -->
+          <!-- Item 6: NativePHP for Symfony -->
           <div class="project-card" data-category="systems">
             <div class="project-top">
               <div class="proj-meta-bar">
@@ -1929,7 +1977,7 @@
             </div>
           </div>
 
-          <!-- Project 5: Leaked Password Checker -->
+          <!-- Item 7: Leaked Password Checker -->
           <div class="project-card" data-category="systems">
             <div class="project-top">
               <div class="proj-meta-bar">
@@ -1953,7 +2001,7 @@
             </div>
           </div>
 
-          <!-- Project 6: AI Assistant Hub -->
+          <!-- Item 8: AI Assistant Hub -->
           <div class="project-card" data-category="systems">
             <div class="project-top">
               <div class="proj-meta-bar">
@@ -1973,57 +2021,6 @@
               </div>
               <div class="proj-action-links">
                 <span class="text-link" style="color:var(--text-dim);">Enterprise Internal Tool</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 7: Reporting & Position Views -->
-          <div class="project-card" data-category="systems">
-            <div class="project-top">
-              <div class="proj-meta-bar">
-                <span class="proj-badge">Database Architecture</span>
-              </div>
-              <h3 class="project-title">Reporting &amp; Position Engine</h3>
-              <p class="project-desc">
-                High-performance reporting layer built on encapsulated SQL views and indexed aggregations &mdash; computing real-time physical commercial positions, stock levels, and multi-tenant delivery metrics.
-              </p>
-            </div>
-            <div class="project-bottom">
-              <div class="proj-tags">
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">Reporting</span>
-                <span class="tech-tag">Query Optimization</span>
-              </div>
-              <div class="proj-action-links">
-                <span class="text-link" style="color:var(--text-dim);">Qbil Enterprise Engine</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 8: API Integration Examples -->
-          <div class="project-card" data-category="sdk">
-            <div class="project-top">
-              <div class="proj-meta-bar">
-                <span class="proj-badge">Developer Tooling</span>
-                <div class="proj-links-top">
-                  <a href="https://github.com/sadiqk2/API-Examples" target="_blank" rel="noopener" class="icon-link" title="Source Code">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                  </a>
-                </div>
-              </div>
-              <h3 class="project-title">API Integration Blueprints</h3>
-              <p class="project-desc">
-                Production-ready boilerplate and client application examples demonstrating OAuth token handling, GraphQL mutations, error recovery, and webhook ingestion for external API consumers.
-              </p>
-            </div>
-            <div class="project-bottom">
-              <div class="proj-tags">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">REST &amp; GraphQL</span>
-              </div>
-              <div class="proj-action-links">
-                <a href="https://github.com/sadiqk2/API-Examples" target="_blank" rel="noopener" class="text-link">View Repo &nearr;</a>
               </div>
             </div>
           </div>
@@ -2138,10 +2135,10 @@
       <div class="container">
         <div class="contact-card">
           <span class="section-eyebrow" style="color:var(--accent);">Let's Connect</span>
-          <h2 class="contact-title">Ready To Build Something Exceptional?</h2>
+          <h2 class="contact-title">Ready To Build &amp; Scale Together?</h2>
           <p class="contact-lead">
-            I am open to senior engineering roles and technical leadership opportunities (remote with EU timezone overlap). 
-            Feel free to reach out via email or phone.
+            I am open to senior engineering roles and technical leadership opportunities (Remote Worldwide / Flexible). 
+            Feel free to reach out via email, phone, or LinkedIn.
           </p>
 
           <div class="contact-button-row">
@@ -2186,7 +2183,7 @@
         <ul class="footer-links">
           <li><a href="#hero">Back to Top &uarr;</a></li>
           <li><a href="https://github.com/sadiqk2/sadiqk2.github.io" target="_blank" rel="noopener">Site Repository</a></li>
-          <li><a href="https://developers.qbiltrade.com" target="_blank" rel="noopener">Qbil API Docs</a></li>
+          <li><a href="https://linkedin.com/in/sadiq-ali-khan-39a2821b5" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
