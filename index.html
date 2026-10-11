@@ -1325,7 +1325,98 @@
     .mobile-nav-drawer a:hover {
       color: var(--accent);
     }
+    /* Floating Back-to-Top Button */
+    .back-to-top-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s ease;
+      z-index: 90;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .back-to-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top-btn:hover {
+      color: var(--accent);
+      border-color: var(--card-border-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Print Stylesheet for Resume PDF export */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .ambient-bg, .navbar, .theme-toggle-btn, .mobile-menu-toggle, 
+      .mobile-nav-drawer, .hero-ctas, .filter-tabs, .btn-copy-toast, 
+      footer, .back-to-top-btn {
+        display: none !important;
+      }
+      .container {
+        max-width: 100% !important;
+        padding: 0 10px !important;
+      }
+      .section-wrap {
+        padding: 18px 0 !important;
+        border-top: 1px solid #cbd5e1 !important;
+        page-break-inside: avoid;
+      }
+      .stat-card, .skill-category-card, .timeline-item, .project-card, .oss-card, .edu-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        color: #000000 !important;
+        page-break-inside: avoid;
+      }
+      a {
+        color: #000000 !important;
+        text-decoration: underline !important;
+      }
+    }
   </style>
+  <!-- JSON-LD Structured Data for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sadiq Ali Khan",
+    "jobTitle": "Senior Full-Stack Software Engineer",
+    "url": "https://sadiqk2.github.io/",
+    "sameAs": [
+      "https://github.com/Sadiqk2",
+      "https://linkedin.com/in/sadiq-ali-khan-39a2821b5",
+      "https://developers.qbiltrade.com"
+    ],
+    "knowsAbout": [
+      "PHP", "Symfony", "GraphQL", "REST APIs", "AWS", "Docker", "React", "TypeScript", "MySQL", "Domain-Driven Design", "Root-Cause Analysis"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Sharda University"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -1460,6 +1551,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             <span>Copy Email</span>
             <span class="copy-tooltip" id="copyTooltipHero">Copied! &check;</span>
+          </button>
+
+          <!-- Print / Save as PDF Button -->
+          <button class="btn btn-secondary" onclick="window.print()" title="Print or save résumé as PDF">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
+            <span>Print / PDF</span>
           </button>
 
           <a href="https://github.com/Sadiqk2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
@@ -2261,7 +2358,55 @@
           });
         });
       }
+
+      // 6. Floating Back to Top Button
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 350) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 7. ScrollSpy Active Link Tracking
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+
+      function updateActiveNav() {
+        const scrollPos = window.scrollY + 120;
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute('id');
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach(link => {
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveNav);
+      updateActiveNav();
     })();
   </script>
+  <!-- Floating Back-to-Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Scroll back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
 </body>
 </html>
