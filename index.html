@@ -150,12 +150,12 @@
       height: 100%;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.65;
-      transition: opacity 0.5s ease;
+      opacity: 0.6;
+      transition: opacity 0.4s ease;
     }
 
     [data-theme="light"] .webgl-canvas {
-      opacity: 0.45;
+      opacity: 0.55;
     }
 
     .container {
@@ -2511,7 +2511,7 @@
   <!-- Three.js Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-  <!-- Three.js Interactive Hero Constellation / Neural Network Animation -->
+    <!-- Three.js Interactive Hero Constellation / Neural Network Animation -->
   <script>
     (function initHeroConstellation() {
       if (typeof THREE === 'undefined') return;
@@ -2519,14 +2519,13 @@
       const canvas = document.getElementById('bg-canvas');
       if (!canvas) return;
 
-      // Check for user preference for reduced motion
       const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       // Renderer setup
       const renderer = new THREE.WebGLRenderer({
         canvas: canvas,
         alpha: true,
-        antialias: window.devicePixelRatio <= 1,
+        antialias: true,
         powerPreference: 'high-performance'
       });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -2534,78 +2533,88 @@
 
       // Scene & Camera setup
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 2000);
-      camera.position.z = 750;
+      const camera = new THREE.PerspectiveCamera(52, window.innerWidth / window.innerHeight, 1, 2000);
+      camera.position.z = 720;
 
-      // Responsive particle count based on screen size
       const isMobile = window.innerWidth < 768;
-      const particleCount = prefersReducedMotion ? 25 : (isMobile ? 45 : 85);
-      const maxDistance = isMobile ? 110 : 140;
+      // Slight offset to create visual harmony with left-aligned hero text
+      scene.position.x = isMobile ? 0 : 80;
+      scene.position.y = isMobile ? 0 : 25;
 
-      // Theme Colors definition
-      const darkColorParticle = new THREE.Color(0x38bdf8); // Sky blue
-      const darkColorLine = new THREE.Color(0x0284c7);     // Deep sky
-      const lightColorParticle = new THREE.Color(0x0284c7);
-      const lightColorLine = new THREE.Color(0x94a3b8);    // Subtle slate
+      const particleCount = prefersReducedMotion ? 26 : (isMobile ? 45 : 80);
+      const maxDistance = isMobile ? 120 : 145;
+      const maxConnectionsPerNode = 3;
+
+      // Theme colors definitions
+      // Dark Mode: Electric cyan particles with deep azure connective lines & additive glow
+      const darkColorParticle = new THREE.Color(0x38bdf8);   // Vibrant Sky Cyan (#38bdf8)
+      const darkColorLine = new THREE.Color(0x0284c7);       // Deep Azure (#0284c7)
+      const darkBg = new THREE.Color(0x090d16);
+
+      // Light Mode: Clean sapphire/azure nodes (#0284c7) with delicate sky-blue links (#38bdf8)
+      // seamlessly fading into the slate-50 background (#f8fafc) without muddy dark lines
+      const lightColorParticle = new THREE.Color(0x0284c7);  // Royal Azure
+      const lightColorLine = new THREE.Color(0x38bdf8);      // Sky Blue
+      const lightBg = new THREE.Color(0xf8fafc);             // Page background
 
       function getIsLight() {
         return document.documentElement.getAttribute('data-theme') === 'light';
       }
 
-      // Geometries & Materials
+      // Geometries & Particles setup
       const particlesData = [];
       const particlePositions = new Float32Array(particleCount * 3);
-      const bounds = { x: 900, y: 650, z: 500 };
+      const bounds = { x: 880, y: 620, z: 480 };
 
       for (let i = 0; i < particleCount; i++) {
-        const x = (Math.random() - 0.5) * bounds.x;
-        const y = (Math.random() - 0.5) * bounds.y;
-        const z = (Math.random() - 0.5) * bounds.z;
-
-        particlePositions[i * 3] = x;
-        particlePositions[i * 3 + 1] = y;
-        particlePositions[i * 3 + 2] = z;
+        particlePositions[i * 3] = (Math.random() - 0.5) * bounds.x;
+        particlePositions[i * 3 + 1] = (Math.random() - 0.5) * bounds.y;
+        particlePositions[i * 3 + 2] = (Math.random() - 0.5) * bounds.z;
 
         particlesData.push({
           velocity: new THREE.Vector3(
-            (Math.random() - 0.5) * (prefersReducedMotion ? 0.05 : 0.4),
-            (Math.random() - 0.5) * (prefersReducedMotion ? 0.05 : 0.4),
-            (Math.random() - 0.5) * (prefersReducedMotion ? 0.05 : 0.3)
+            (Math.random() - 0.5) * (prefersReducedMotion ? 0.04 : 0.36),
+            (Math.random() - 0.5) * (prefersReducedMotion ? 0.04 : 0.36),
+            (Math.random() - 0.5) * (prefersReducedMotion ? 0.04 : 0.28)
           ),
           numConnections: 0
         });
       }
 
-      // Point Cloud Geometry
+      // Point cloud geometry
       const pointGeometry = new THREE.BufferGeometry();
       pointGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3).setUsage(THREE.DynamicDrawUsage));
 
-      // Circular sprite texture for particles
-      const canvasSprite = document.createElement('canvas');
-      canvasSprite.width = 32;
-      canvasSprite.height = 32;
-      const ctx = canvasSprite.getContext('2d');
-      const grad = ctx.createRadialGradient(16, 16, 0, 16, 16, 16);
+      // Universal high-res radial particle sprite
+      const spriteCanvas = document.createElement('canvas');
+      spriteCanvas.width = 64;
+      spriteCanvas.height = 64;
+      const sCtx = spriteCanvas.getContext('2d');
+      const grad = sCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
       grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
-      grad.addColorStop(0.3, 'rgba(56, 189, 248, 0.9)');
-      grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
-      ctx.fillStyle = grad;
-      ctx.fillRect(0, 0, 32, 32);
-      const spriteTexture = new THREE.CanvasTexture(canvasSprite);
+      grad.addColorStop(0.24, 'rgba(255, 255, 255, 0.95)');
+      grad.addColorStop(0.52, 'rgba(255, 255, 255, 0.4)');
+      grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      sCtx.fillStyle = grad;
+      sCtx.fillRect(0, 0, 64, 64);
+      const spriteTexture = new THREE.CanvasTexture(spriteCanvas);
+
+      const isLightInit = getIsLight();
 
       const pointMaterial = new THREE.PointsMaterial({
-        color: getIsLight() ? lightColorParticle : darkColorParticle,
-        size: isMobile ? 5 : 6.5,
+        color: isLightInit ? lightColorParticle : darkColorParticle,
+        size: isMobile ? 5.5 : 7,
         map: spriteTexture,
         transparent: true,
-        blending: THREE.AdditiveBlending,
+        opacity: isLightInit ? 0.9 : 0.95,
+        blending: isLightInit ? THREE.NormalBlending : THREE.AdditiveBlending,
         depthWrite: false
       });
 
       const pointCloud = new THREE.Points(pointGeometry, pointMaterial);
       scene.add(pointCloud);
 
-      // Line Segments Geometry
+      // Line segments geometry
       const maxLines = (particleCount * (particleCount - 1)) / 2;
       const linePositions = new Float32Array(maxLines * 6);
       const lineColors = new Float32Array(maxLines * 6);
@@ -2617,29 +2626,25 @@
       const lineMaterial = new THREE.LineBasicMaterial({
         vertexColors: true,
         transparent: true,
-        blending: THREE.AdditiveBlending,
+        opacity: isLightInit ? 0.8 : 0.9,
+        blending: isLightInit ? THREE.NormalBlending : THREE.AdditiveBlending,
         depthWrite: false
       });
 
       const linesMesh = new THREE.LineSegments(lineGeometry, lineMaterial);
       scene.add(linesMesh);
 
-      // Mouse Parallax
-      let mouseX = 0;
-      let mouseY = 0;
-      let targetX = 0;
-      let targetY = 0;
-
-      window.addEventListener('mousemove', (e) => {
-        targetX = (e.clientX - window.innerWidth / 2) * 0.18;
-        targetY = (e.clientY - window.innerHeight / 2) * 0.18;
-      }, { passive: true });
-
-      // Theme Change Observer
+      // Theme switcher sync
       function syncThemeColors() {
         const isLight = getIsLight();
         pointMaterial.color.copy(isLight ? lightColorParticle : darkColorParticle);
+        pointMaterial.blending = isLight ? THREE.NormalBlending : THREE.AdditiveBlending;
+        pointMaterial.opacity = isLight ? 0.9 : 0.95;
+        pointMaterial.size = isMobile ? 5.5 : (isLight ? 6.5 : 7.2);
+        pointMaterial.needsUpdate = true;
+
         lineMaterial.blending = isLight ? THREE.NormalBlending : THREE.AdditiveBlending;
+        lineMaterial.opacity = isLight ? 0.8 : 0.9;
         lineMaterial.needsUpdate = true;
       }
 
@@ -2652,7 +2657,14 @@
       });
       themeObserver.observe(document.documentElement, { attributes: true });
 
-      // Visibility & Performance management: pause when hero is scrolled off screen
+      // Mouse Parallax
+      let mouseX = 0, mouseY = 0, targetX = 0, targetY = 0;
+      window.addEventListener('mousemove', (e) => {
+        targetX = (e.clientX - window.innerWidth / 2) * 0.14;
+        targetY = (e.clientY - window.innerHeight / 2) * 0.14;
+      }, { passive: true });
+
+      // Visibility Observer
       let isVisible = true;
       const heroSection = document.getElementById('hero');
       if ('IntersectionObserver' in window && heroSection) {
@@ -2672,26 +2684,33 @@
           camera.aspect = window.innerWidth / window.innerHeight;
           camera.updateProjectionMatrix();
           renderer.setSize(window.innerWidth, window.innerHeight);
-        }, 150);
+          const mob = window.innerWidth < 768;
+          scene.position.x = mob ? 0 : 80;
+          scene.position.y = mob ? 0 : 25;
+        }, 120);
       });
 
+      // Color interpolation scratch object
+      const scratchColor = new THREE.Color();
+
       // Animation Loop
-      let animationFrameId;
+      let clock = 0;
       function animate() {
-        animationFrameId = requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
 
         if (!isVisible && window.scrollY > 800) return;
+        clock += 0.012;
 
-        // Smooth camera lerp with mouse
-        mouseX += (targetX - mouseX) * 0.05;
-        mouseY += (targetY - mouseY) * 0.05;
+        // Smooth camera damping
+        mouseX += (targetX - mouseX) * 0.045;
+        mouseY += (targetY - mouseY) * 0.045;
         camera.position.x = mouseX;
         camera.position.y = -mouseY;
         camera.lookAt(scene.position);
 
-        // Slow rotation of entire constellation
-        scene.rotation.y += 0.0006;
-        scene.rotation.x += 0.0003;
+        // Slow organic rotation
+        scene.rotation.y += 0.0005;
+        scene.rotation.x += 0.00025;
 
         let vertexPos = 0;
         let colorPos = 0;
@@ -2703,16 +2722,17 @@
 
         const isLight = getIsLight();
         const baseLineColor = isLight ? lightColorLine : darkColorLine;
+        const targetBgColor = isLight ? lightBg : darkBg;
 
-        // Update particle positions & connections
+        // Update particle positions & lines
         for (let i = 0; i < particleCount; i++) {
           const data = particlesData[i];
 
           particlePositions[i * 3] += data.velocity.x;
-          particlePositions[i * 3 + 1] += data.velocity.y;
+          particlePositions[i * 3 + 1] += data.velocity.y + Math.sin(clock + i * 0.45) * 0.09;
           particlePositions[i * 3 + 2] += data.velocity.z;
 
-          // Bounce off bounds
+          // Boundary bouncing
           if (particlePositions[i * 3] < -bounds.x / 2 || particlePositions[i * 3] > bounds.x / 2) {
             data.velocity.x = -data.velocity.x;
           }
@@ -2723,15 +2743,19 @@
             data.velocity.z = -data.velocity.z;
           }
 
-          // Connect nearby particles
+          // Build clean, uncluttered constellation connections
           for (let j = i + 1; j < particleCount; j++) {
+            if (data.numConnections >= maxConnectionsPerNode || particlesData[j].numConnections >= maxConnectionsPerNode) {
+              continue;
+            }
+
             const dx = particlePositions[i * 3] - particlePositions[j * 3];
             const dy = particlePositions[i * 3 + 1] - particlePositions[j * 3 + 1];
             const dz = particlePositions[i * 3 + 2] - particlePositions[j * 3 + 2];
             const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
             if (dist < maxDistance) {
-              const alpha = (1.0 - dist / maxDistance) * (isLight ? 0.35 : 0.55);
+              const proximity = 1.0 - (dist / maxDistance);
 
               linePositions[vertexPos++] = particlePositions[i * 3];
               linePositions[vertexPos++] = particlePositions[i * 3 + 1];
@@ -2741,14 +2765,33 @@
               linePositions[vertexPos++] = particlePositions[j * 3 + 1];
               linePositions[vertexPos++] = particlePositions[j * 3 + 2];
 
-              lineColors[colorPos++] = baseLineColor.r * alpha;
-              lineColors[colorPos++] = baseLineColor.g * alpha;
-              lineColors[colorPos++] = baseLineColor.b * alpha;
+              if (isLight) {
+                // In Light Mode: Smoothly lerp towards #f8fafc (background)
+                // This guarantees lines fade into transparency without turning into dirty black lines
+                const easeProximity = proximity * proximity; // Quadratic ease for soft falloff
+                scratchColor.copy(targetBgColor).lerp(baseLineColor, easeProximity * 0.82);
 
-              lineColors[colorPos++] = baseLineColor.r * alpha;
-              lineColors[colorPos++] = baseLineColor.g * alpha;
-              lineColors[colorPos++] = baseLineColor.b * alpha;
+                lineColors[colorPos++] = scratchColor.r;
+                lineColors[colorPos++] = scratchColor.g;
+                lineColors[colorPos++] = scratchColor.b;
 
+                lineColors[colorPos++] = scratchColor.r;
+                lineColors[colorPos++] = scratchColor.g;
+                lineColors[colorPos++] = scratchColor.b;
+              } else {
+                // In Dark Mode: Electric cyan with additive glow
+                const alpha = proximity * 0.6;
+                lineColors[colorPos++] = baseLineColor.r * alpha;
+                lineColors[colorPos++] = baseLineColor.g * alpha;
+                lineColors[colorPos++] = baseLineColor.b * alpha;
+
+                lineColors[colorPos++] = baseLineColor.r * alpha;
+                lineColors[colorPos++] = baseLineColor.g * alpha;
+                lineColors[colorPos++] = baseLineColor.b * alpha;
+              }
+
+              data.numConnections++;
+              particlesData[j].numConnections++;
               numConnected++;
             }
           }
